@@ -38,41 +38,32 @@ export default function About() {
         </div>
       </section>
 
-      {/* Company Overview Section */}
-      <section className="bg-[#fafafa] py-10">
-        <div className="max-w-4xl mx-auto text-center px-4">
-          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-3">
-            Company Overview
-          </h2>
-          <p className="text-base text-[#6a6a6a] md:text-lg">
-            Founded by technology veterans, Vietnam Silicon delivers enterprise
-            AI, digital transformation, and cybersecurity solutions across
-            Southeast Asia. We combine technical excellence with industry
-            knowledge to drive measurable business outcomes.
-          </p>
-        </div>
-      </section>
-
       {/* Team Members Section */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-3xl font-bold text-primary text-center mb-12">
             Our Team Members
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="flex flex-wrap justify-center gap-8">
             {/* Team Member Card 1 */}
-            <div className="shine-effect bg-primary rounded-lg shadow-lg transition-transform hover:-translate-y-2 p-4 h-[450px] group">
-              <div className="relative h-80 overflow-hidden">
+            <div
+              className="shine-effect bg-primary rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
+              style={{ width: "256px", height: "418px" }}
+            >
+              <div
+                className="relative overflow-hidden"
+                style={{ height: "320px" }}
+              >
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[2500ms] animate-shine-diagonal"></div>
                 <Image
                   src="/images/member_image.png"
-                  alt="Cô Lâm Thanh Hằng"
+                  alt="Team Member 1"
                   fill
                   className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
               <div className="p-4 text-center">
-                <p className="text-white mb-2">Giáo viên</p>
+                <p className="text-white mb-2">HR Leader</p>
                 <h3 className="text-xl font-semibold text-white">
                   Trần Diệu Thuỳ
                 </h3>
@@ -80,58 +71,51 @@ export default function About() {
             </div>
 
             {/* Team Member Card 2 */}
-            <div className="shine-effect bg-primary rounded-lg shadow-lg transition-transform hover:-translate-y-2 p-4 h-[450px] group">
-              <div className="relative h-80 overflow-hidden">
+            <div
+              className="shine-effect bg-primary rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
+              style={{ width: "256px", height: "418px" }}
+            >
+              <div
+                className="relative overflow-hidden"
+                style={{ height: "320px" }}
+              >
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[2500ms] animate-shine-diagonal"></div>
                 <Image
                   src="/images/member_image.png"
-                  alt="Cô Lâm Thanh Hằng"
+                  alt="Team Member 1"
                   fill
                   className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
               <div className="p-4 text-center">
-                <p className="text-white mb-2">Giáo viên</p>
+                <p className="text-white mb-2">HR Executive</p>
                 <h3 className="text-xl font-semibold text-white">
-                  Trần Diệu Thuỳ
+                  Nguyễn Quế Kim
                 </h3>
               </div>
             </div>
 
             {/* Team Member Card 3 */}
-            <div className="shine-effect bg-primary rounded-lg shadow-lg transition-transform hover:-translate-y-2 p-4 h-[450px] group">
-              <div className="relative h-80 overflow-hidden">
+            <div
+              className="shine-effect bg-primary rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
+              style={{ width: "256px", height: "418px" }}
+            >
+              <div
+                className="relative overflow-hidden"
+                style={{ height: "320px" }}
+              >
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[2500ms] animate-shine-diagonal"></div>
                 <Image
                   src="/images/member_image.png"
-                  alt="Cô Lâm Thanh Hằng"
+                  alt="Team Member 1"
                   fill
                   className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
               <div className="p-4 text-center">
-                <p className="text-white mb-2">Giáo viên</p>
+                <p className="text-white mb-2">L&D Executive</p>
                 <h3 className="text-xl font-semibold text-white">
-                  Trần Diệu Thuỳ
-                </h3>
-              </div>
-            </div>
-
-            {/* Team Member Card 4 */}
-            <div className="shine-effect bg-primary rounded-lg shadow-lg transition-transform hover:-translate-y-2 p-4 h-[450px] group">
-              <div className="relative h-80 overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[2500ms] animate-shine-diagonal"></div>
-                <Image
-                  src="/images/member_image.png"
-                  alt="Cô Lâm Thanh Hằng"
-                  fill
-                  className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <div className="p-4 text-center">
-                <p className="text-white mb-2">Giáo viên</p>
-                <h3 className="text-xl font-semibold text-white">
-                  Trần Diệu Thuỳ
+                  Nguyễn Bảo Hân
                 </h3>
               </div>
             </div>
@@ -146,49 +130,95 @@ export default function About() {
             Partner that work with Us
           </h2>
           <p className="text-lg md:text-xl font-medium">
-            We collaborate with global technology leaders to deliver
-            cutting-edge solutions:
+            Với mục tiêu trở thành Tập đoàn công nghiệp đa ngành hàng đầu ASEAN,
+            phát triển bền vững trong bối cảnh hội nhập khu vực và thế giới,
+            mang lại giá trị cho khách hàng, đối tác, xã hội và phát triển kinh
+            tế đất nước với tinh thần “Tận tâm phục vụ”, THACO không ngừng đầu
+            tư phát triển sức mạnh nội sinh, đổi mới tư duy và hành động, nâng
+            chất, nâng tầm của đội ngũ nhân sự. Để làm được những điều này, một
+            trong những yếu tố quan trọng để điều hành, quản trị công ty phải kể
+            đến chính là văn hóa THACO.
           </p>
         </div>
       </section>
 
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div></div> {/* Empty for centering */}
-            {/* Card 1 */}
-            <div className="shine-effect bg-primary rounded-lg shadow-lg transition-transform hover:-translate-y-2 p-4 h-[450px] group">
-              <div className="relative h-80 overflow-hidden">
+          <div className="flex flex-wrap justify-center gap-8">
+            {/* Team Member Card 1 */}
+            <div
+              className="shine-effect bg-primary rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
+              style={{ width: "256px", height: "418px" }}
+            >
+              <div
+                className="relative overflow-hidden"
+                style={{ height: "320px" }}
+              >
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[2500ms] animate-shine-diagonal"></div>
                 <Image
                   src="/images/member_image.png"
-                  alt="Partner 1"
+                  alt="Team Member 1"
                   fill
                   className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
               <div className="p-4 text-center">
-                <p className="text-white mb-2">Đối tác</p>
-                <h3 className="text-xl font-semibold text-white">Tên đối tác 1</h3>
+                <p className="text-white mb-2">HR Consultant</p>
+                <h3 className="text-xl font-semibold text-white">
+                  Phan Ngọc Ánh
+                </h3>
               </div>
             </div>
-            {/* Card 2 */}
-            <div className="shine-effect bg-primary rounded-lg shadow-lg transition-transform hover:-translate-y-2 p-4 h-[450px] group">
-              <div className="relative h-80 overflow-hidden">
+
+            {/* Team Member Card 2 */}
+            <div
+              className="shine-effect bg-primary rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
+              style={{ width: "256px", height: "418px" }}
+            >
+              <div
+                className="relative overflow-hidden"
+                style={{ height: "320px" }}
+              >
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[2500ms] animate-shine-diagonal"></div>
                 <Image
                   src="/images/member_image.png"
-                  alt="Partner 2"
+                  alt="Team Member 1"
                   fill
                   className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
               <div className="p-4 text-center">
-                <p className="text-white mb-2">Đối tác</p>
-                <h3 className="text-xl font-semibold text-white">Tên đối tác 2</h3>
+                <p className="text-white mb-2">HR Consultant</p>
+                <h3 className="text-xl font-semibold text-white">
+                  Võ Thị Kim Phụng
+                </h3>
               </div>
             </div>
-            <div></div> {/* Empty for centering */}
+
+            {/* Team Member Card 3 */}
+            <div
+              className="shine-effect bg-primary rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
+              style={{ width: "256px", height: "418px" }}
+            >
+              <div
+                className="relative overflow-hidden"
+                style={{ height: "320px" }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[2500ms] animate-shine-diagonal"></div>
+                <Image
+                  src="/images/member_image.png"
+                  alt="Team Member 1"
+                  fill
+                  className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-110"
+                />
+              </div>
+              <div className="p-4 text-center">
+                <p className="text-white mb-2">HR Consultant</p>
+                <h3 className="text-xl font-semibold text-white">
+                  Trương Thị Khánh Vy
+                </h3>
+              </div>
+            </div>
           </div>
         </div>
       </section>

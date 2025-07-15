@@ -1,27 +1,32 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Report() {
   const reports = [
     {
       chapter: "01",
-      title: "Digital Transformation",
-      description: "Leading innovation in digital solutions across Southeast Asia"
+      title: "Tổng quan cơ cấu lao động tại THACO",
+      description: "Leading innovation in digital solutions across Southeast Asia",
+      link: "tong-quan-co-cau-lao-dong-thaco",
     },
     {
       chapter: "02",
-      title: "AI Integration",
-      description: "Implementing cutting-edge AI solutions for business growth"
+      title: "Tuyển dụng",
+      description: "Implementing cutting-edge AI solutions for business growth",
+      link: "tuyen-dung",
     },
     {
       chapter: "03",
-      title: "Cloud Solutions",
-      description: "Scalable and secure cloud infrastructure services"
+      title: "Đào tạo và phát triển",
+      description: "Scalable and secure cloud infrastructure services",
+      link: "dao-tao-va-phat-trien",
     },
     {
       chapter: "04",
       title: "Cybersecurity",
-      description: "Advanced security measures for enterprise protection"
-    }
+      description: "Advanced security measures for enterprise protection",
+      link: "cybersecurity",
+    },
   ];
 
   return (
@@ -49,8 +54,11 @@ export default function Report() {
                 Our Reports
               </h1>
               <p className="text-white text-lg md:text-xl font-medium mb-0">
-                Discover our comprehensive analysis and insights into the latest technological advancements
-                and digital transformation strategies that are shaping the future of Southeast Asia.
+                Trong 25 năm hình thành và phát triển, THACO đã có sự biến động
+                rất lớn về nhân sự về cả quy mô lẫn cấu trúc tổ chức. Bắt đầu từ
+                khi công ty chỉ là một xưởng sửa xe với chỉ vài chục thợ máy đến
+                nay đã trở thành một tập đoàn công nghiệp đa ngành với gần
+                23.000 nhân viên trên cả nước.
               </p>
             </div>
           </div>
@@ -62,8 +70,9 @@ export default function Report() {
         <div className="max-w-4xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 cursor-pointer place-items-center">
             {reports.map((report, index) => (
-              <div 
+              <Link
                 key={index}
+                href={`/report/${report.link}`}
                 className="group relative w-full max-w-md h-[220px] bg-white hover:bg-gradient-to-br hover:from-blue-500 hover:to-purple-600 rounded-lg transition-all duration-500 border border-gray-200 hover:border-transparent shadow-sm hover:shadow-xl overflow-hidden p-8 flex flex-col justify-center"
               >
                 {/* Chapter number and line */}
@@ -73,21 +82,21 @@ export default function Report() {
                   </span>
                   <div className="w-16 h-0.5 bg-gray-300 group-hover:bg-white/80 transition-all duration-500"></div>
                 </div>
-                
+
                 {/* Title with slide-up animation */}
                 <div className="transform transition-all duration-500 group-hover:-translate-y-4">
                   <h3 className="text-2xl font-semibold text-gray-800 group-hover:text-white mb-4 transition-all duration-500">
                     {report.title}
                   </h3>
                 </div>
-                
+
                 {/* Description with fade-in and slide-up animation */}
                 <div className="transform transition-all duration-500 translate-y-8 opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
                   <p className="text-gray-600 group-hover:text-white/90">
                     {report.description}
                   </p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
