@@ -418,7 +418,6 @@ export default function TuyenDung() {
           {/* Chart Description */}
           <div className="text-center mb-12">
             <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
-              <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
               Biểu đồ 2.1. Tổng quan về công tác tuyển dụng
             </p>
           </div>
@@ -433,7 +432,6 @@ export default function TuyenDung() {
           {/* Chart Description 2 */}
           <div className="text-center mb-12">
             <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
-              <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
               Biểu đồ 2.2. Hiệu quả của công tác tuyển dụng
             </p>
           </div>
@@ -448,7 +446,6 @@ export default function TuyenDung() {
           {/* Chart Description 3 */}
           <div className="text-center mb-12">
             <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
-              <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
               Biểu đồ 2.3. Tổng hợp chi phí tuyển dụng của THACO
             </p>
           </div>
@@ -463,7 +460,6 @@ export default function TuyenDung() {
           {/* Chart Description 4 */}
           <div className="text-center mb-12">
             <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
-              <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
               Biểu đồ 2.4. Tổng hợp hoạt động tuyển dụng của THACO
             </p>
           </div>

@@ -70,7 +70,7 @@ export default function Home() {
           {/* <h2 className="text-lg md:text-xl font-semibold text-white mb-4">
             Reach your fullest potential
           </h2> */}
-          <p className="text-white text-base md:text-lg max-w-2xl mb-6">
+          <p className="text-white text-base md:text-lg max-w-4xl mb-6">
             Công ty cổ phần Tập đoàn Trường Hải (THACO) được thành lập vào ngày
             29/04/1997. Sau 25 năm hình thành và phát triển, THACO đã trở thành
             Tập đoàn công nghiệp đa ngành, trong đó Cơ khí và Ô tô là chủ lực,
