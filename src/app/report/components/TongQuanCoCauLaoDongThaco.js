@@ -192,7 +192,7 @@ export default function TongQuanCoCauLaoDongThaco() {
     <div className="min-h-screen bg-gray-50 pt-16">
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
-          <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">
+          <h1 className="text-4xl font-bold mb-8 text-center text-primary">
             Tổng quan cơ cấu lao động tại THACO
           </h1>
 

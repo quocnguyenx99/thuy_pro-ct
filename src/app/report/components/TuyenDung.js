@@ -404,7 +404,7 @@ export default function TuyenDung() {
     <div className="min-h-screen bg-gray-50 pt-16">
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
-          <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">
+          <h1 className="text-4xl font-bold mb-8 text-center text-primary">
             Tuyển dụng tại THACO
           </h1>
 
@@ -465,16 +465,6 @@ export default function TuyenDung() {
             <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
               <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
               Biểu đồ 2.4. Tổng hợp hoạt động tuyển dụng của THACO
-            </p>
-          </div>
-
-          {/* Additional Content */}
-          <div className="mt-8 prose prose-lg max-w-none">
-            <p className="text-gray-600 leading-relaxed">
-              Biểu đồ trên thể hiện tình hình tuyển dụng tại THACO qua các năm 2021-2023. 
-              Có thể thấy nhu cầu tuyển dụng tăng mạnh từ 2,150 người năm 2021 lên 4,600 người năm 2023. 
-              Tương ứng, số lượng ứng tuyển cũng tăng từ 3,440 lên 5,980 người. 
-              Tỷ lệ trúng tuyển và ký hợp đồng lao động cũng có xu hướng tăng theo.
             </p>
           </div>
         </div>

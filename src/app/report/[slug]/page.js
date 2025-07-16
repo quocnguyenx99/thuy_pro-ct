@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation";
 import TuyenDung from "../components/TuyenDung";
 import TongQuanCoCauLaoDongThaco from "../components/TongQuanCoCauLaoDongThaco";
-// import DaoTaoVaPhatTrien from "../components/DaoTaoVaPhatTrien";
+import DaoTaoVaPhatTrien from "../components/DaoTaoVaPhatTrien";
+import ChinhSachDaiNgo from "../components/ChinhSachDaiNgo";
 // import Cybersecurity from "../components/Cybersecurity";
 
 export const dynamicParams = true;
@@ -17,8 +18,8 @@ export default function ReportDetailPage({ params }) {
         return <TuyenDung />;
       case "dao-tao-va-phat-trien":
         return <DaoTaoVaPhatTrien />;
-    //   case "cybersecurity":
-    //     return <Cybersecurity />;
+      case "chinh-sach-dai-ngo":
+        return <ChinhSachDaiNgo />;
       default:
         notFound();
     }

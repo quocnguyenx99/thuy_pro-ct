@@ -23,9 +23,9 @@ export default function Report() {
     },
     {
       chapter: "04",
-      title: "Cybersecurity",
+      title: "Chính sách đãi ngộ",
       description: "Advanced security measures for enterprise protection",
-      link: "cybersecurity",
+      link: "chinh-sach-dai-ngo",
     },
   ];
 
