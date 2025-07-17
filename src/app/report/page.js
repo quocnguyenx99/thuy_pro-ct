@@ -6,32 +6,28 @@ export default function Report() {
     {
       chapter: "01",
       title: "Tổng quan cơ cấu lao động tại THACO",
-      description: "Leading innovation in digital solutions across Southeast Asia",
       link: "tong-quan-co-cau-lao-dong-thaco",
     },
     {
       chapter: "02",
       title: "Tuyển dụng",
-      description: "Implementing cutting-edge AI solutions for business growth",
       link: "tuyen-dung",
     },
     {
       chapter: "03",
       title: "Đào tạo và phát triển",
-      description: "Scalable and secure cloud infrastructure services",
       link: "dao-tao-va-phat-trien",
     },
     {
       chapter: "04",
       title: "Chính sách đãi ngộ",
-      description: "Advanced security measures for enterprise protection",
       link: "chinh-sach-dai-ngo",
     },
   ];
 
   return (
     <>
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-96 md:h-[500px] flex items-center justify-center overflow-hidden">
         {/* Fixed banner image */}
         <div className="absolute inset-0 w-full h-full z-0">
           <Image
@@ -50,15 +46,13 @@ export default function Report() {
           <div className="w-full max-w-3xl mx-auto">
             <div className="flex flex-col items-center">
               <div className="w-16 h-1 bg-secondary mb-4 rounded" />
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Our Reports
               </h1>
-              <p className="text-white text-lg md:text-xl font-medium mb-0">
-                Trong 25 năm hình thành và phát triển, THACO đã có sự biến động
-                rất lớn về nhân sự về cả quy mô lẫn cấu trúc tổ chức. Bắt đầu từ
-                khi công ty chỉ là một xưởng sửa xe với chỉ vài chục thợ máy đến
-                nay đã trở thành một tập đoàn công nghiệp đa ngành với gần
-                23.000 nhân viên trên cả nước.
+              <p className="text-white text-base md:text-lg font-medium mb-0 leading-relaxed">
+                Dữ liệu về nguồn nhân lực THACO giai đoạn 2021–2023 cung cấp cái
+                nhìn toàn diện về cơ cấu nhân sự, tuyển dụng, đào tạo và chế độ
+                đãi ngộ.
               </p>
             </div>
           </div>

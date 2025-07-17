@@ -50,10 +50,10 @@ export default function TongQuanCoCauLaoDongThaco() {
     labels: ["2021", "2022", "2023"],
     datasets: [
       {
-        label: "Trên ĐH",
-        data: [4301, 4554, 4600],
-        backgroundColor: "#22D3EE", // light blue
-        borderColor: "#22D3EE",
+        label: "Cao đẳng",
+        data: [1564, 1656, 2300],
+        backgroundColor: "#0F4C75", // darker blue
+        borderColor: "#0F4C75",
         borderWidth: 0,
       },
       {
@@ -64,10 +64,10 @@ export default function TongQuanCoCauLaoDongThaco() {
         borderWidth: 0,
       },
       {
-        label: "Cao đẳng",
-        data: [1564, 1656, 2300],
-        backgroundColor: "#0F4C75", // darker blue
-        borderColor: "#0F4C75",
+        label: "Trên ĐH",
+        data: [4301, 4554, 4600],
+        backgroundColor: "#22D3EE", // light blue
+        borderColor: "#22D3EE",
         borderWidth: 0,
       },
     ],
@@ -78,10 +78,10 @@ export default function TongQuanCoCauLaoDongThaco() {
     labels: ["2021", "2022", "2023"],
     datasets: [
       {
-        label: ">45",
-        data: [1173, 1656, 2300],
-        backgroundColor: "#22D3EE", // light blue
-        borderColor: "#22D3EE",
+        label: "<30",
+        data: [7820, 8280, 9200],
+        backgroundColor: "#0F4C75", // darker blue
+        borderColor: "#0F4C75",
         borderWidth: 0,
       },
       {
@@ -92,10 +92,10 @@ export default function TongQuanCoCauLaoDongThaco() {
         borderWidth: 0,
       },
       {
-        label: "<30",
-        data: [7820, 8280, 9200],
-        backgroundColor: "#0F4C75", // darker blue
-        borderColor: "#0F4C75",
+        label: ">45",
+        data: [1173, 1656, 2300],
+        backgroundColor: "#22D3EE", // light blue
+        borderColor: "#22D3EE",
         borderWidth: 0,
       },
     ],
@@ -220,7 +220,8 @@ export default function TongQuanCoCauLaoDongThaco() {
           {/* Chart Description 2 */}
           <div className="text-center mb-12">
             <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
-              Biểu đồ 1.2. Tình hình nguồn nhân lực của THACO theo trình độ học vấn
+              Biểu đồ 1.2. Tình hình nguồn nhân lực của THACO theo trình độ học
+              vấn
             </p>
           </div>
 

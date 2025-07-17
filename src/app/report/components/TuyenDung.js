@@ -140,13 +140,15 @@ export default function TuyenDung() {
       legend: {
         position: "top",
         align: "center",
+        maxWidth: 900,
         labels: {
           usePointStyle: true,
           pointStyle: "circle",
-          padding: 20,
+          padding: 15,
           font: {
-            size: 14,
+            size: 13,
           },
+          boxWidth: 12,
         },
       },
       title: {
@@ -207,13 +209,15 @@ export default function TuyenDung() {
       legend: {
         position: "top",
         align: "center",
+        maxWidth: 900,
         labels: {
           usePointStyle: true,
           pointStyle: "circle",
-          padding: 20,
+          padding: 15,
           font: {
-            size: 14,
+            size: 13,
           },
+          boxWidth: 12,
         },
       },
       title: {
@@ -274,13 +278,15 @@ export default function TuyenDung() {
       legend: {
         position: "top",
         align: "center",
+        maxWidth: 900,
         labels: {
           usePointStyle: true,
           pointStyle: "circle",
-          padding: 20,
+          padding: 15,
           font: {
-            size: 14,
+            size: 13,
           },
+          boxWidth: 12,
         },
       },
       title: {
@@ -341,13 +347,15 @@ export default function TuyenDung() {
       legend: {
         position: "top",
         align: "center",
+        maxWidth: 900,
         labels: {
           usePointStyle: true,
           pointStyle: "circle",
-          padding: 20,
+          padding: 15,
           font: {
-            size: 14,
+            size: 13,
           },
+          boxWidth: 12,
         },
       },
       title: {
@@ -410,7 +418,7 @@ export default function TuyenDung() {
 
           {/* Chart Container */}
           <div className="bg-white p-6 rounded-lg flex justify-center">
-            <div style={{ width: "650px", height: "400px" }}>
+            <div style={{ width: "900px", height: "400px" }}>
               <Bar data={recruitmentData} options={options} />
             </div>
           </div>
@@ -424,7 +432,7 @@ export default function TuyenDung() {
 
           {/* Chart Container 2 - Efficiency */}
           <div className="bg-white p-6 rounded-lg flex justify-center">
-            <div style={{ width: "650px", height: "400px" }}>
+            <div style={{ width: "900px", height: "400px" }}>
               <Bar data={efficiencyData} options={efficiencyOptions} />
             </div>
           </div>
@@ -438,7 +446,7 @@ export default function TuyenDung() {
 
           {/* Chart Container 3 - Cost */}
           <div className="bg-white p-6 rounded-lg flex justify-center">
-            <div style={{ width: "650px", height: "400px" }}>
+            <div style={{ width: "900px", height: "400px" }}>
               <Bar data={costData} options={costOptions} />
             </div>
           </div>
@@ -452,7 +460,7 @@ export default function TuyenDung() {
 
           {/* Chart Container 4 - Activity */}
           <div className="bg-white p-6 rounded-lg flex justify-center">
-            <div style={{ width: "650px", height: "400px" }}>
+            <div style={{ width: "900px", height: "400px" }}>
               <Bar data={activityData} options={activityOptions} />
             </div>
           </div>

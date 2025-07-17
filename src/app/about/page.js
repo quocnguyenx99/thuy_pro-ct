@@ -19,19 +19,22 @@ export default function About() {
 
         {/* Content */}
         <div className="relative z-10 flex flex-col items-center text-center px-4">
-          <div className="w-full max-w-3xl mx-auto">
+          <div className="w-full max-w-5xl mx-auto">
             <div className="flex flex-col items-center">
               <div className="w-16 h-1 bg-secondary mb-4 rounded" />
-              <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+              {/* <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
                 About Vietnam Silicon
-              </h1>
+              </h1> */}
               <p className="text-white text-lg md:text-xl font-medium mb-0">
-                At Vietnam Silicon, we’re more than just a technology
-                company—we’re an innovation partner driving digital
-                transformation across Southeast Asia. As Vietnam’s premier tech
-                innovation center, we combine world-class technical expertise
-                with local insights to deliver transformative solutions and
-                shape the future of technology.
+                Với mục tiêu trở thành Tập đoàn công nghiệp đa ngành hàng đầu
+                ASEAN, phát triển bền vững trong bối cảnh hội nhập khu vực và
+                thế giới, mang lại giá trị cho khách hàng, đối tác, xã hội và
+                phát triển kinh tế đất nước với tinh thần “Tận tâm phục vụ”,
+                THACO không ngừng đầu tư phát triển sức mạnh nội sinh, đổi mới
+                tư duy và hành động, nâng chất, nâng tầm của đội ngũ nhân sự. Để
+                làm được những điều này, một trong những yếu tố quan trọng để
+                điều hành, quản trị công ty phải kể đến chính là văn hóa
+                THACO.
               </p>
             </div>
           </div>
@@ -130,14 +133,12 @@ export default function About() {
             Partner that work with Us
           </h2>
           <p className="text-lg md:text-xl font-medium">
-            Với mục tiêu trở thành Tập đoàn công nghiệp đa ngành hàng đầu ASEAN,
-            phát triển bền vững trong bối cảnh hội nhập khu vực và thế giới,
-            mang lại giá trị cho khách hàng, đối tác, xã hội và phát triển kinh
-            tế đất nước với tinh thần “Tận tâm phục vụ”, THACO không ngừng đầu
-            tư phát triển sức mạnh nội sinh, đổi mới tư duy và hành động, nâng
-            chất, nâng tầm của đội ngũ nhân sự. Để làm được những điều này, một
-            trong những yếu tố quan trọng để điều hành, quản trị công ty phải kể
-            đến chính là văn hóa THACO.
+            V.Y Consulting tự hào là đối tác chiến lược của THACO trong việc
+            xây dựng và phát triển văn hóa doanh nghiệp, góp phần nâng cao hiệu
+            quả hoạt động và phát triển bền vững của tập đoàn. Chúng tôi cam
+            kết mang đến những giải pháp nhân sự tối ưu, phù hợp với chiến lược
+            phát triển của THACO, từ việc tuyển dụng, đào tạo đến phát triển
+            nguồn nhân lực chất lượng cao.
           </p>
         </div>
       </section>

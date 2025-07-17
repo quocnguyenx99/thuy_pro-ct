@@ -35,14 +35,14 @@ export default function Home() {
             <SwiperSlide>
               <div className="relative w-full h-full">
                 <Image
-                  src="/images/banner_1.webp"
+                  src="/images/banner_1.jpg"
                   alt="Banner 1"
                   fill
                   className="object-cover"
                   priority
                 />
                 {/* Overlay phủ lên ảnh */}
-                <div className="absolute inset-0 bg-black/50 pointer-events-none" />
+                <div className="absolute inset-0 bg-black/70 pointer-events-none" />
               </div>
             </SwiperSlide>
             <SwiperSlide>

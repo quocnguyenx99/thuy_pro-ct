@@ -1,6 +1,6 @@
 "use client";
-import { Bar } from 'react-chartjs-2';
-import { useState } from 'react';
+import { Bar } from "react-chartjs-2";
+import { useState } from "react";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -8,15 +8,14 @@ import {
   BarElement,
   Title,
   Tooltip,
-  Legend
-} from 'chart.js';
+  Legend,
+} from "chart.js";
 
-// Try importing ChartDataLabels differently
 let ChartDataLabels;
 try {
-  ChartDataLabels = require('chartjs-plugin-datalabels');
+  ChartDataLabels = require("chartjs-plugin-datalabels");
 } catch (e) {
-  console.warn('ChartDataLabels plugin not found');
+  console.warn("ChartDataLabels plugin not found");
 }
 
 ChartJS.register(
@@ -35,49 +34,58 @@ export default function DaoTaoVaPhatTrien() {
   const careerLevels = [
     {
       id: 1,
-      title: "Nhân viên hỗ trợ kinh doanh",
+      title: "Nhân viên",
+      subtitle: "1-2 năm kinh nghiệm",
       color: "from-red-400 to-red-500",
       bgColor: "bg-red-50",
       borderColor: "border-red-200",
-      content: "Hỗ trợ các hoạt động kinh doanh cơ bản, thực hiện các công việc theo hướng dẫn, học hỏi và phát triển kỹ năng chuyên môn.",
-      skills: ["Kỹ năng cơ bản", "Theo dõi hướng dẫn", "Học hỏi chuyên môn"]
+      content:
+        "• Thực thi các công việc được cấp trên giao phó;\n• Phối hợp với các nhân viên khác để hoàn thành nhiệm vụ.",
     },
     {
       id: 2,
-      title: "Nhân viên kinh doanh",
+      title: "Trưởng nhóm",
+      subtitle:
+        "Có kinh nghiệm ít nhất 3 năm và quản lý nhóm nhỏ (< 6n người) trong vòng 1 năm",
       color: "from-orange-400 to-orange-500",
       bgColor: "bg-orange-50",
       borderColor: "border-orange-200",
-      content: "Thực hiện các hoạt động kinh doanh, tiếp xúc khách hàng, xử lý đơn hàng và báo cáo kết quả công việc.",
-      skills: ["Tiếp xúc khách hàng", "Xử lý đơn hàng", "Báo cáo kết quả"]
+      content:
+        "• Đảm nhận một nhóm hàng, 1 nhóm khách hàng hoặc 1 công việc mang tính chuyên môn cao;\n• Ra quyết định trong phạm vi được ủy quyền;\n• Tạo tinh thần làm việc nhóm.",
     },
     {
       id: 3,
-      title: "Trưởng nhóm kinh doanh",
+      title: "Giám sát",
+      subtitle:
+        "Có kinh nghiệm ít nhất 5 năm và quản lý nhóm nhỏ (< 15 người) trong vòng 3 năm",
       color: "from-yellow-400 to-yellow-500",
       bgColor: "bg-yellow-50",
       borderColor: "border-yellow-200",
-      content: "Quản lý nhóm nhân viên kinh doanh, phân công công việc, theo dõi kết quả và hỗ trợ phát triển đội ngũ.",
-      skills: ["Quản lý nhóm", "Phân công công việc", "Phát triển đội ngũ"]
+      content:
+        "• Hoạch định, tổ chức, giám sát 1 lĩnh vực hoạt động của phòng ban; Quản lý ngân sách được giao; Kèm cặp và đánh giá nhân viên trực thuộc.",
     },
     {
       id: 4,
-      title: "Trưởng phòng kinh doanh",
+      title: "Trưởng phòng",
+      subtitle:
+        "Có kinh nghiệm ít nhất 8 năm và quản lý nhóm (>15 người) trong vòng 5 năm",
       color: "from-green-400 to-green-500",
       bgColor: "bg-green-50",
       borderColor: "border-green-200",
-      content: "Quản lý toàn bộ hoạt động kinh doanh của phòng, xây dựng chiến lược và định hướng phát triển.",
-      skills: ["Quản lý phòng ban", "Xây dựng chiến lược", "Định hướng phát triển"]
+      content:
+        "• Lập kế hoạch cho phòng ban mình; Quản lý ngân sách, kết hợp với các phòng ban để hoàn thành nhiệm vụ;\n• Phân công, giao việc và kiểm soát tiến độ; Đánh giá hiệu quả từng nhóm thành viên; Đào tạo, kèm cặp, huấn luyện để phát triển đội ngũ.",
     },
     {
       id: 5,
-      title: "Giám đốc kinh doanh",
+      title: "Giám đốc",
+      subtitle:
+        "Có kinh nghiệm ít nhất 10 năm và 5 năm điều hành ở vị trí tương đương",
       color: "from-blue-400 to-blue-500",
       bgColor: "bg-blue-50",
       borderColor: "border-blue-200",
-      content: "Điều hành toàn bộ hoạt động kinh doanh của công ty, xây dựng chiến lược dài hạn và chịu trách nhiệm về kết quả kinh doanh.",
-      skills: ["Điều hành toàn bộ", "Chiến lược dài hạn", "Trách nhiệm kết quả"]
-    }
+      content:
+        "• Lập chiến lược ngắn hạn và trung hạn cho các bộ phận phụ trách; Quản lý ngân sách; Phân bố nguồn lực; Thiết lập sơ đồ tổ chức và các mối quan hệ trong phòng ban;\n• Đánh giá hiệu quả và mục tiêu cần đạt; Đào tạo và nâng tầm đội ngũ kế thừa.",
+    },
   ];
 
   const toggleExpanded = (levelId) => {
@@ -85,23 +93,23 @@ export default function DaoTaoVaPhatTrien() {
   };
 
   const chartData = {
-    labels: ['2021', '2022', '2023'],
+    labels: ["2021", "2022", "2023"],
     datasets: [
       {
-        label: 'Số lượng ứng viên được tuyển dụng sau chương trình TTS',
+        label: "Số lượng ứng viên được tuyển dụng sau chương trình TTS",
         data: [50, 35, 20],
-        backgroundColor: '#22D3EE',
-        borderColor: '#22D3EE',
+        backgroundColor: "#22D3EE",
+        borderColor: "#22D3EE",
         borderWidth: 0,
       },
       {
-        label: 'Số lượng ứng viên còn lại mỗi năm',
+        label: "Số lượng ứng viên còn lại mỗi năm",
         data: [10, 5, 3],
-        backgroundColor: '#0891B2',
-        borderColor: '#0891B2',
+        backgroundColor: "#0891B2",
+        borderColor: "#0891B2",
         borderWidth: 0,
-      }
-    ]
+      },
+    ],
   };
 
   const options = {
@@ -109,11 +117,11 @@ export default function DaoTaoVaPhatTrien() {
     maintainAspectRatio: false,
     plugins: {
       legend: {
-        position: 'top',
-        align: 'center',
+        position: "top",
+        align: "center",
         labels: {
           usePointStyle: true,
-          pointStyle: 'circle',
+          pointStyle: "circle",
           padding: 20,
           font: {
             size: 14,
@@ -126,11 +134,11 @@ export default function DaoTaoVaPhatTrien() {
       ...(ChartDataLabels && {
         datalabels: {
           display: true,
-          align: 'end',
-          anchor: 'end',
-          color: '#000',
+          align: "end",
+          anchor: "end",
+          color: "#000",
           font: {
-            weight: 'bold',
+            weight: "bold",
             size: 12,
           },
           formatter: (value) => {
@@ -151,7 +159,7 @@ export default function DaoTaoVaPhatTrien() {
           },
         },
         grid: {
-          color: '#E5E5E5',
+          color: "#E5E5E5",
         },
       },
       x: {
@@ -180,27 +188,27 @@ export default function DaoTaoVaPhatTrien() {
             Đào tạo và phát triển tại THACO
           </h1>
 
-          {/* Single Table Container */}
-          <div className="bg-white p-6 rounded-lg mb-2">
+          {/* First Table Container - Chương trình nội bộ */}
+          <div className="bg-white p-6 rounded-lg mb-4">
             <div className="overflow-x-auto">
               <table className="w-full border-collapse border border-gray-400">
                 <tbody>
                   {/* Header Row */}
                   <tr className="bg-gray-100">
                     <th className="border border-gray-400 px-4 py-3 text-left font-semibold text-gray-700">
-                      Loại chương trình
+                      Chương trình nội bộ
                     </th>
                     <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700">
-                      Tổng số đề tài/chương trình
+                      Tổng số đề tài
                     </th>
                     <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700">
-                      Tổng số bài viết/học viên
+                      Tổng số bài viết
                     </th>
                     <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700">
-                      Tổng số học viên/chương trình hoàn tất
+                      Tổng số học viên đăng ký tham gia
                     </th>
                   </tr>
-                  {/* First Data Row */}
+                  {/* Data Row */}
                   <tr className="hover:bg-gray-50">
                     <td className="border border-gray-400 px-4 py-3 text-gray-800 font-medium">
                       Chương trình nội bộ
@@ -215,7 +223,32 @@ export default function DaoTaoVaPhatTrien() {
                       2407
                     </td>
                   </tr>
-                  {/* Second Data Row */}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Second Table Container - Chương trình liên kết với website khác */}
+          <div className="bg-white p-6 rounded-lg mb-2">
+            <div className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-400">
+                <tbody>
+                  {/* Header Row */}
+                  <tr className="bg-gray-100">
+                    <th className="border border-gray-400 px-4 py-3 text-left font-semibold text-gray-700">
+                      Chương trình liên kết với website khác
+                    </th>
+                    <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700">
+                      Tổng số chương trình đăng ký
+                    </th>
+                    <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700">
+                      Tổng số học viên đăng ký tham gia
+                    </th>
+                    <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700">
+                      Tổng số chương trình hoàn tất
+                    </th>
+                  </tr>
+                  {/* Data Row */}
                   <tr className="hover:bg-gray-50">
                     <td className="border border-gray-400 px-4 py-3 text-gray-800 font-medium">
                       Chương trình liên kết với website khác
@@ -235,13 +268,6 @@ export default function DaoTaoVaPhatTrien() {
             </div>
           </div>
 
-          {/* Centered Table Caption */}
-          <div className="text-center mb-12">
-            <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
-              Bảng 3.1. Số lượng chương trình đào tạo trực tuyến của THACO năm 2022
-            </p>
-          </div>
-
           {/* Chart Container */}
           <div className="bg-white p-6 rounded-lg flex justify-center">
             <div style={{ width: "650px", height: "400px" }}>
@@ -252,7 +278,8 @@ export default function DaoTaoVaPhatTrien() {
           {/* Chart Description */}
           <div className="text-center mb-12">
             <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
-              Biểu đồ 3.2: Biểu đồ thống kê số lượng học viên tham gia chương trình đào tạo MTP 2021 - 2023
+              Biểu đồ 3.1. Biểu đồ thống kê số lượng học viên tham gia chương
+              trình đào tạo MTP 2021 - 2023
             </p>
           </div>
 
@@ -261,45 +288,60 @@ export default function DaoTaoVaPhatTrien() {
             <h2 className="text-2xl font-bold mb-8 text-center text-gray-800">
               Lộ trình phát triển nghề nghiệp tại THACO
             </h2>
-            
+
             <div className="relative bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-xl shadow-inner">
               {/* Staircase */}
               <div className="flex items-end justify-center space-x-2 pb-20">
                 {careerLevels.map((level, index) => (
-                  <div key={level.id} className="flex flex-col items-center relative">
+                  <div
+                    key={level.id}
+                    className="flex flex-col items-center relative"
+                  >
                     {/* Step */}
-                    <div 
+                    <div
                       className={`bg-gradient-to-br ${level.color} relative cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-105 rounded-t-lg shadow-md`}
                       style={{
-                        width: '160px',
-                        height: `${120 + (index * 40)}px`,
-                        marginBottom: `${index * 20}px`
+                        width: "160px",
+                        height: `${120 + index * 40}px`,
+                        marginBottom: `${index * 20}px`,
                       }}
                       onClick={() => toggleExpanded(level.id)}
                     >
                       {/* Level Number - Fixed positioning */}
                       <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-md border-2 border-gray-200 z-10">
-                        <span className="text-sm font-bold text-gray-700">{level.id}</span>
+                        <span className="text-sm font-bold text-gray-700">
+                          {level.id}
+                        </span>
                       </div>
-                      
+
                       {/* Content */}
                       <div className="p-4 pt-8 h-full flex flex-col justify-center items-center text-center">
-                        <h3 className="text-sm font-bold text-white leading-tight mb-4 flex-1 flex items-center">
+                        <h3 className="text-sm font-bold text-white leading-tight mb-2">
                           {level.title}
                         </h3>
-                        
+                        {level.subtitle && (
+                          <p className="text-xs text-white/90 mb-4">
+                            {level.subtitle}
+                          </p>
+                        )}
+
                         {/* Expand/Collapse Button */}
                         <div className="mt-auto">
                           <div className="bg-white/20 backdrop-blur-sm rounded-full p-2 hover:bg-white/30 transition-colors">
-                            <svg 
+                            <svg
                               className={`w-5 h-5 text-white transition-transform duration-300 ${
-                                expandedLevel === level.id ? 'rotate-180' : ''
+                                expandedLevel === level.id ? "rotate-180" : ""
                               }`}
-                              fill="none" 
-                              stroke="currentColor" 
+                              fill="none"
+                              stroke="currentColor"
                               viewBox="0 0 24 24"
                             >
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M19 9l-7 7-7-7"
+                              />
                             </svg>
                           </div>
                         </div>
@@ -308,45 +350,47 @@ export default function DaoTaoVaPhatTrien() {
 
                     {/* Expanded Content - Fixed positioning */}
                     {expandedLevel === level.id && (
-                      <div 
+                      <div
                         className={`absolute ${level.bgColor} ${level.borderColor} border-2 rounded-xl shadow-lg p-6 w-80 z-20 animate-slideDown`}
                         style={{
-                          top: '100%',
-                          left: '50%',
-                          transform: 'translateX(-50%)',
-                          marginTop: '1rem'
+                          top: "100%",
+                          left: "50%",
+                          transform: "translateX(-50%)",
+                          marginTop: "1rem",
                         }}
                       >
                         <div className="space-y-4">
                           <div>
-                            <h4 className="font-bold text-gray-800 mb-2">Mô tả công việc:</h4>
-                            <p className="text-gray-600 text-sm leading-relaxed">
-                              {level.content}
-                            </p>
-                          </div>
-                          
-                          <div>
-                            <h4 className="font-bold text-gray-800 mb-2">Kỹ năng cần có:</h4>
-                            <div className="flex flex-wrap gap-2">
-                              {level.skills.map((skill, skillIndex) => (
-                                <span 
-                                  key={skillIndex}
-                                  className="px-3 py-1 bg-white rounded-full text-xs font-medium text-gray-700 shadow-sm border"
-                                >
-                                  {skill}
-                                </span>
+                            <h4 className="font-bold text-gray-800 mb-3 text-center">
+                              {level.title}
+                            </h4>
+                            <div className="text-gray-600 text-sm leading-relaxed">
+                              {level.content.split("\n").map((line, index) => (
+                                <p key={index} className="mb-2">
+                                  {line}
+                                </p>
                               ))}
                             </div>
                           </div>
                         </div>
-                        
+
                         {/* Close button */}
-                        <button 
+                        <button
                           onClick={() => setExpandedLevel(null)}
                           className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 transition-colors"
                         >
-                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                          <svg
+                            className="w-5 h-5"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M6 18L18 6M6 6l12 12"
+                            />
                           </svg>
                         </button>
                       </div>
@@ -355,16 +399,7 @@ export default function DaoTaoVaPhatTrien() {
                 ))}
               </div>
             </div>
-
-            {/* Section Description */}
-            <div className="text-center mt-8">
-              <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
-                <span className="w-2 h-2 bg-black rounded-full mr-3"></span>
-                Hình 3.3: Lộ trình phát triển nghề nghiệp tại THACO
-              </p>
-            </div>
           </div>
-
         </div>
       </div>
     </div>
