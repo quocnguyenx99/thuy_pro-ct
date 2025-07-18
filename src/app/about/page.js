@@ -59,7 +59,7 @@ export default function About() {
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[2500ms] animate-shine-diagonal"></div>
                 <Image
-                  src="/images/member_image.png"
+                  src="/images/thuy.jpg"
                   alt="Team Member 1"
                   fill
                   className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-110"
@@ -84,7 +84,7 @@ export default function About() {
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[2500ms] animate-shine-diagonal"></div>
                 <Image
-                  src="/images/member_image.png"
+                  src="/images/kim.jpg"
                   alt="Team Member 1"
                   fill
                   className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-110"
@@ -109,7 +109,7 @@ export default function About() {
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[2500ms] animate-shine-diagonal"></div>
                 <Image
-                  src="/images/member_image.png"
+                  src="/images/han.jpg"
                   alt="Team Member 1"
                   fill
                   className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-110"
@@ -157,7 +157,7 @@ export default function About() {
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[2500ms] animate-shine-diagonal"></div>
                 <Image
-                  src="/images/member_image.png"
+                  src="/images/anh.jpg"
                   alt="Team Member 1"
                   fill
                   className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-110"
@@ -182,7 +182,7 @@ export default function About() {
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[2500ms] animate-shine-diagonal"></div>
                 <Image
-                  src="/images/member_image.png"
+                  src="/images/phung.jpg"
                   alt="Team Member 1"
                   fill
                   className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-110"
@@ -207,7 +207,7 @@ export default function About() {
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[2500ms] animate-shine-diagonal"></div>
                 <Image
-                  src="/images/member_image.png"
+                  src="/images/vy.jpg"
                   alt="Team Member 1"
                   fill
                   className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-110"
