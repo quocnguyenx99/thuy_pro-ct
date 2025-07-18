@@ -234,15 +234,15 @@ export default function ChinhSachDaiNgo() {
 
   return (
     <div className="min-h-screen bg-gray-50 pt-16">
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        <div className="bg-white rounded-lg shadow-lg p-8">
+      <div className="max-w-6xl mx-auto px-2 md:px-4 py-8">
+        <div className="bg-white rounded-lg shadow-lg p-4 md:p-8">
           <h1 className="text-4xl font-bold mb-8 text-center text-primary">
             Chính sách đãi ngộ tại THACO
           </h1>
 
           {/* Chart Container */}
           <div className="bg-white p-6 rounded-lg flex justify-center">
-            <div style={{ width: "900px", height: "400px" }}>
+            <div className="w-full max-w-[900px]" style={{ height: "400px" }}>
               <Bar data={salaryData} options={options} />
             </div>
           </div>
@@ -673,7 +673,7 @@ export default function ChinhSachDaiNgo() {
 
           {/* Bonus Ratio Line Chart */}
           <div className="bg-white p-6 rounded-lg flex justify-center">
-            <div style={{ width: "650px", height: "400px" }}>
+            <div className="w-full max-w-[650px]" style={{ height: "400px" }}>
               <Line data={bonusRatioData} options={bonusRatioOptions} />
             </div>
           </div>

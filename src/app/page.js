@@ -85,9 +85,9 @@ export default function Home() {
       </section>
 
       <section className="w-full py-10 bg-white flex flex-col items-center justify-center">
-        <div className="max-w-6xl w-full flex flex-col md:flex-row items-start justify-center gap-8 px-4">
+        <div className="max-w-6xl w-full flex flex-col lg:flex-row items-start justify-center gap-8 px-4">
           {/* Left: Image */}
-          <div className="w-full md:w-1/2 flex justify-center">
+          <div className="w-full lg:w-1/2 flex justify-center">
             <img
               src="/images/home_content_img.png"
               alt="Digital Transformation"
@@ -96,12 +96,12 @@ export default function Home() {
           </div>
 
           {/* Right: Content */}
-          <div className="w-full md:w-1/2 flex flex-col gap-16 mt-24">
+          <div className="w-full lg:w-1/2 flex flex-col gap-8 lg:gap-16 lg:mt-24">
             {/* Items */}
-            <div className="flex flex-col gap-16">
+            <div className="flex flex-col gap-8 lg:gap-16">
               {/* Item 1 */}
               <div className="flex flex-col gap-2">
-                <div className="flex flex-row items-center gap-6">
+                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
                   <div className="flex items-center min-w-[140px]">
                     <div
                       className="h-1 w-full"
@@ -117,7 +117,7 @@ export default function Home() {
                     Tầm nhìn
                   </h3>
                 </div>
-                <p className="text-gray-700 text-base mt-2 ml-[160px]">
+                <p className="text-gray-700 text-base mt-2 md:ml-[160px]">
                   Tập đoàn công nghiệp đa ngành hàng đầu khu vực ASEAN, phát
                   triển bền vững trong bối cảnh hội nhập khu vực và thế giới.
                 </p>
@@ -125,7 +125,7 @@ export default function Home() {
 
               {/* Item 2 */}
               <div className="flex flex-col gap-2">
-                <div className="flex flex-row items-center gap-6">
+                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
                   <div className="flex items-center min-w-[140px]">
                     <div
                       className="h-1 w-full"
@@ -140,15 +140,15 @@ export default function Home() {
                     Sứ mạng
                   </h3>
                 </div>
-                <p className="text-gray-700 text-base mt-2 ml-[160px]">
+                <p className="text-gray-700 text-base mt-2 md:ml-[160px]">
                   Mang lại giá trị cho khách hàng, đối tác, xã hội và phát triển
-                  kinh tế đất nước với tinh thần “Tận tâm phục vụ ” .
+                  kinh tế đất nước với tinh thần "Tận tâm phục vụ " .
                 </p>
               </div>
 
               {/* Item 3 */}
               <div className="flex flex-col gap-2">
-                <div className="flex flex-row items-center gap-6">
+                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-6">
                   <div className="flex items-center min-w-[140px]">
                     <div
                       className="h-1 w-full"
@@ -163,7 +163,7 @@ export default function Home() {
                     Chiến lược
                   </h3>
                 </div>
-                <p className="text-gray-700 text-base mt-2 ml-[160px]">
+                <p className="text-gray-700 text-base mt-2 md:ml-[160px]">
                   THACO là Tập đoàn công nghiệp đa ngành có các Tập đoàn thành
                   viên hoạt động trong các lĩnh vực: Ô tô, Nông nghiệp, Cơ khí &
                   Công nghiệp hỗ trợ, Đầu tư & Xây dựng, Thương mại & Dịch vụ và
@@ -194,7 +194,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 md:gap-8">
             {/* Tận tâm */}
             <div className="group flex flex-col items-center text-center p-6 rounded-lg hover:bg-white hover:shadow-lg transition-all duration-300 cursor-pointer">
               <div className="relative mb-6">

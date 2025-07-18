@@ -182,8 +182,8 @@ export default function DaoTaoVaPhatTrien() {
 
   return (
     <div className="min-h-screen bg-gray-50 pt-16">
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        <div className="bg-white rounded-lg shadow-lg p-8">
+      <div className="max-w-6xl mx-auto px-2 md:px-4 py-8">
+        <div className="bg-white rounded-lg shadow-lg p-4 md:p-8">
           <h1 className="text-4xl font-bold mb-8 text-center text-primary">
             Đào tạo và phát triển tại THACO
           </h1>
@@ -270,7 +270,7 @@ export default function DaoTaoVaPhatTrien() {
 
           {/* Chart Container */}
           <div className="bg-white p-6 rounded-lg flex justify-center">
-            <div style={{ width: "650px", height: "400px" }}>
+            <div className="w-full max-w-[650px]" style={{ height: "400px" }}>
               <Bar data={chartData} options={options} />
             </div>
           </div>
@@ -289,21 +289,21 @@ export default function DaoTaoVaPhatTrien() {
               Lộ trình phát triển nghề nghiệp tại THACO
             </h2>
 
-            <div className="relative bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-xl shadow-inner">
+            <div className="relative bg-gradient-to-br from-gray-50 to-gray-100 p-4 md:p-8 rounded-xl shadow-inner">
               {/* Staircase */}
-              <div className="flex items-end justify-center space-x-2 pb-20">
+              <div className="flex items-end justify-center space-x-1 md:space-x-2 pb-20 overflow-x-auto">
                 {careerLevels.map((level, index) => (
                   <div
                     key={level.id}
-                    className="flex flex-col items-center relative"
+                    className="flex flex-col items-center relative flex-shrink-0"
                   >
                     {/* Step */}
                     <div
                       className={`bg-gradient-to-br ${level.color} relative cursor-pointer transition-all duration-300 hover:shadow-lg hover:scale-105 rounded-t-lg shadow-md`}
                       style={{
-                        width: "160px",
-                        height: `${120 + index * 40}px`,
-                        marginBottom: `${index * 20}px`,
+                        width: "120px",
+                        height: `${100 + index * 30}px`,
+                        marginBottom: `${index * 15}px`,
                       }}
                       onClick={() => toggleExpanded(level.id)}
                     >
@@ -351,7 +351,7 @@ export default function DaoTaoVaPhatTrien() {
                     {/* Expanded Content - Fixed positioning */}
                     {expandedLevel === level.id && (
                       <div
-                        className={`absolute ${level.bgColor} ${level.borderColor} border-2 rounded-xl shadow-lg p-6 w-80 z-20 animate-slideDown`}
+                        className={`absolute ${level.bgColor} ${level.borderColor} border-2 rounded-xl shadow-lg p-4 md:p-6 w-72 md:w-80 z-20 animate-slideDown`}
                         style={{
                           top: "100%",
                           left: "50%",

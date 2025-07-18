@@ -44,11 +44,11 @@ export default function About() {
           <h2 className="text-3xl font-bold text-primary text-center mb-12">
             Our Team Members
           </h2>
-          <div className="flex flex-wrap justify-center gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 justify-items-center">
             {/* Team Member Card 1 */}
             <div
-              className="shine-effect bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
-              style={{ width: "256px", height: "418px" }}
+              className="shine-effect bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-lg shadow-lg transition-transform hover:-translate-y-2 group w-full max-w-[256px]"
+              style={{ height: "418px" }}
             >
               <div
                 className="relative overflow-hidden p-3"
@@ -74,8 +74,8 @@ export default function About() {
 
             {/* Team Member Card 2 */}
             <div
-              className="shine-effect bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
-              style={{ width: "256px", height: "418px" }}
+              className="shine-effect bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-lg shadow-lg transition-transform hover:-translate-y-2 group w-full max-w-[256px]"
+              style={{ height: "418px" }}
             >
               <div
                 className="relative overflow-hidden p-3"
@@ -101,8 +101,8 @@ export default function About() {
 
             {/* Team Member Card 3 */}
             <div
-              className="shine-effect bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
-              style={{ width: "256px", height: "418px" }}
+              className="shine-effect bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-lg shadow-lg transition-transform hover:-translate-y-2 group w-full max-w-[256px]"
+              style={{ height: "418px" }}
             >
               <div
                 className="relative overflow-hidden p-3"
@@ -151,8 +151,8 @@ export default function About() {
           <div className="flex flex-wrap justify-center gap-8">
             {/* Team Member Card 1 */}
             <div
-              className="shine-effect bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
-              style={{ width: "256px", height: "418px" }}
+              className="shine-effect bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 rounded-lg shadow-lg transition-transform hover:-translate-y-2 group w-full max-w-[256px]"
+              style={{ height: "418px" }}
             >
               <div
                 className="relative overflow-hidden p-3"
@@ -178,8 +178,8 @@ export default function About() {
 
             {/* Team Member Card 2 */}
             <div
-              className="shine-effect bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
-              style={{ width: "256px", height: "418px" }}
+              className="shine-effect bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 rounded-lg shadow-lg transition-transform hover:-translate-y-2 group w-full max-w-[256px]"
+              style={{ height: "418px" }}
             >
               <div
                 className="relative overflow-hidden p-3"
@@ -205,8 +205,8 @@ export default function About() {
 
             {/* Team Member Card 3 */}
             <div
-              className="shine-effect bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
-              style={{ width: "256px", height: "418px" }}
+              className="shine-effect bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 rounded-lg shadow-lg transition-transform hover:-translate-y-2 group w-full max-w-[256px]"
+              style={{ height: "418px" }}
             >
               <div
                 className="relative overflow-hidden p-3"
