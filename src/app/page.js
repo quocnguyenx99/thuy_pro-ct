@@ -72,12 +72,11 @@ export default function Home() {
           </h2> */}
           <p className="text-white text-base md:text-lg max-w-4xl mb-6">
             Công ty cổ phần Tập đoàn Trường Hải (THACO) được thành lập vào ngày
-            29/04/1997. Sau 25 năm hình thành và phát triển, THACO đã trở thành
-            Tập đoàn công nghiệp đa ngành, trong đó Cơ khí và Ô tô là chủ lực,
-            đồng thời phát triển các lĩnh vực sản xuất kinh doanh bổ trợ cho
-            nhau, tạo ra giá trị cộng hưởng và nâng cao năng lực cạnh tranh, bao
-            gồm: Nông nghiệp; Đầu tư xây dựng; Logistics và Thương mại & Dịch
-            vụ.
+            29/04/1997. THACO đã trở thành Tập đoàn công nghiệp đa ngành gồm 6
+            Tập đoàn thành viên: THACO AUTO (Ô tô), THACO INDUSTRIES (Cơ khí &
+            Công nghiệp hỗ trợ), THACO AGRI (Nông nghiệp), THADICO (Đầu tư & Xây
+            dựng), THISO (Thương mại & Dịch vụ) và THILOGI (Logistics), trong đó
+            các ngành bổ trợ cho nhau và có tính tích hợp cao.
           </p>
           <button className="bg-secondary hover:bg-orange-600 cursor-pointer text-white font-semibold px-8 py-3 rounded-md transition-all duration-300 min-w-[220px] w-full max-w-xs">
             Join Us Now

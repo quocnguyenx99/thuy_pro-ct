@@ -14,7 +14,7 @@ export default function About() {
             priority
           />
           {/* Overlay chỉ phủ lên ảnh */}
-          <div className="absolute inset-0 bg-primary/70 pointer-events-none" />
+          <div className="absolute inset-0 bg-black/60 pointer-events-none" />
         </div>
 
         {/* Content */}
@@ -31,10 +31,7 @@ export default function About() {
                 thế giới, mang lại giá trị cho khách hàng, đối tác, xã hội và
                 phát triển kinh tế đất nước với tinh thần “Tận tâm phục vụ”,
                 THACO không ngừng đầu tư phát triển sức mạnh nội sinh, đổi mới
-                tư duy và hành động, nâng chất, nâng tầm của đội ngũ nhân sự. Để
-                làm được những điều này, một trong những yếu tố quan trọng để
-                điều hành, quản trị công ty phải kể đến chính là văn hóa
-                THACO.
+                tư duy và hành động, nâng chất, nâng tầm của đội ngũ nhân sự.
               </p>
             </div>
           </div>
@@ -50,20 +47,22 @@ export default function About() {
           <div className="flex flex-wrap justify-center gap-8">
             {/* Team Member Card 1 */}
             <div
-              className="shine-effect bg-primary rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
+              className="shine-effect bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
               style={{ width: "256px", height: "418px" }}
             >
               <div
-                className="relative overflow-hidden"
+                className="relative overflow-hidden p-3"
                 style={{ height: "320px" }}
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[2500ms] animate-shine-diagonal"></div>
-                <Image
-                  src="/images/thuy.jpg"
-                  alt="Team Member 1"
-                  fill
-                  className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-110"
-                />
+                <div className="relative h-full w-full rounded-lg overflow-hidden border-4 border-white/20 shadow-inner">
+                  <Image
+                    src="/images/thuy.jpg"
+                    alt="Team Member 1"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
               </div>
               <div className="p-4 text-center">
                 <p className="text-white mb-2">HR Leader</p>
@@ -75,20 +74,22 @@ export default function About() {
 
             {/* Team Member Card 2 */}
             <div
-              className="shine-effect bg-primary rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
+              className="shine-effect bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
               style={{ width: "256px", height: "418px" }}
             >
               <div
-                className="relative overflow-hidden"
+                className="relative overflow-hidden p-3"
                 style={{ height: "320px" }}
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[2500ms] animate-shine-diagonal"></div>
-                <Image
-                  src="/images/kim.jpg"
-                  alt="Team Member 1"
-                  fill
-                  className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-110"
-                />
+                <div className="relative h-full w-full rounded-lg overflow-hidden border-4 border-white/20 shadow-inner">
+                  <Image
+                    src="/images/kim.jpg"
+                    alt="Team Member 1"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
               </div>
               <div className="p-4 text-center">
                 <p className="text-white mb-2">HR Executive</p>
@@ -100,20 +101,22 @@ export default function About() {
 
             {/* Team Member Card 3 */}
             <div
-              className="shine-effect bg-primary rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
+              className="shine-effect bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
               style={{ width: "256px", height: "418px" }}
             >
               <div
-                className="relative overflow-hidden"
+                className="relative overflow-hidden p-3"
                 style={{ height: "320px" }}
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[2500ms] animate-shine-diagonal"></div>
-                <Image
-                  src="/images/han.jpg"
-                  alt="Team Member 1"
-                  fill
-                  className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-110"
-                />
+                <div className="relative h-full w-full rounded-lg overflow-hidden border-4 border-white/20 shadow-inner">
+                  <Image
+                    src="/images/han.jpg"
+                    alt="Team Member 1"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
               </div>
               <div className="p-4 text-center">
                 <p className="text-white mb-2">L&D Executive</p>
@@ -133,12 +136,12 @@ export default function About() {
             Partner that work with Us
           </h2>
           <p className="text-lg md:text-xl font-medium">
-            V.Y Consulting tự hào là đối tác chiến lược của THACO trong việc
-            xây dựng và phát triển văn hóa doanh nghiệp, góp phần nâng cao hiệu
-            quả hoạt động và phát triển bền vững của tập đoàn. Chúng tôi cam
-            kết mang đến những giải pháp nhân sự tối ưu, phù hợp với chiến lược
-            phát triển của THACO, từ việc tuyển dụng, đào tạo đến phát triển
-            nguồn nhân lực chất lượng cao.
+            V.Y Consulting tự hào là đối tác chiến lược của THACO trong việc xây
+            dựng và phát triển văn hóa doanh nghiệp, góp phần nâng cao hiệu quả
+            hoạt động và phát triển bền vững của tập đoàn. Chúng tôi cam kết
+            mang đến những giải pháp nhân sự tối ưu, phù hợp với chiến lược phát
+            triển của THACO, từ việc tuyển dụng, đào tạo đến phát triển nguồn
+            nhân lực chất lượng cao.
           </p>
         </div>
       </section>
@@ -148,20 +151,22 @@ export default function About() {
           <div className="flex flex-wrap justify-center gap-8">
             {/* Team Member Card 1 */}
             <div
-              className="shine-effect bg-primary rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
+              className="shine-effect bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
               style={{ width: "256px", height: "418px" }}
             >
               <div
-                className="relative overflow-hidden"
+                className="relative overflow-hidden p-3"
                 style={{ height: "320px" }}
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[2500ms] animate-shine-diagonal"></div>
-                <Image
-                  src="/images/anh.jpg"
-                  alt="Team Member 1"
-                  fill
-                  className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-110"
-                />
+                <div className="relative h-full w-full rounded-lg overflow-hidden border-4 border-white/20 shadow-inner">
+                  <Image
+                    src="/images/anh.jpg"
+                    alt="Team Member 1"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
               </div>
               <div className="p-4 text-center">
                 <p className="text-white mb-2">HR Consultant</p>
@@ -173,20 +178,22 @@ export default function About() {
 
             {/* Team Member Card 2 */}
             <div
-              className="shine-effect bg-primary rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
+              className="shine-effect bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
               style={{ width: "256px", height: "418px" }}
             >
               <div
-                className="relative overflow-hidden"
+                className="relative overflow-hidden p-3"
                 style={{ height: "320px" }}
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[2500ms] animate-shine-diagonal"></div>
-                <Image
-                  src="/images/phung.jpg"
-                  alt="Team Member 1"
-                  fill
-                  className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-110"
-                />
+                <div className="relative h-full w-full rounded-lg overflow-hidden border-4 border-white/20 shadow-inner">
+                  <Image
+                    src="/images/phung.jpg"
+                    alt="Team Member 1"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
               </div>
               <div className="p-4 text-center">
                 <p className="text-white mb-2">HR Consultant</p>
@@ -198,20 +205,22 @@ export default function About() {
 
             {/* Team Member Card 3 */}
             <div
-              className="shine-effect bg-primary rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
+              className="shine-effect bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 rounded-lg shadow-lg transition-transform hover:-translate-y-2 group"
               style={{ width: "256px", height: "418px" }}
             >
               <div
-                className="relative overflow-hidden"
+                className="relative overflow-hidden p-3"
                 style={{ height: "320px" }}
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-[2500ms] animate-shine-diagonal"></div>
-                <Image
-                  src="/images/vy.jpg"
-                  alt="Team Member 1"
-                  fill
-                  className="object-cover rounded-t-lg transition-transform duration-500 group-hover:scale-110"
-                />
+                <div className="relative h-full w-full rounded-lg overflow-hidden border-4 border-white/20 shadow-inner">
+                  <Image
+                    src="/images/vy.jpg"
+                    alt="Team Member 1"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
               </div>
               <div className="p-4 text-center">
                 <p className="text-white mb-2">HR Consultant</p>

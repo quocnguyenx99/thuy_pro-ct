@@ -5,41 +5,49 @@ import { useState } from "react";
 const jobs = [
   {
     id: 1,
-    title: "Software Engineer (Generative AI)",
-    company: "Navigos Group",
-    logo: "/images/member_image.png",
+    title: "Kế Toán - Tài Chính",
+    logo: "/images/thaco_logo.png",
     location: "Ho Chi Minh",
     salary: "Negotiable",
-    time: "Today",
-    tags: ["Back End Developer", "Backend", "Backend", "+3"],
     isNew: true,
+    description: "- Nhận, kiểm tra hợp đồng và ghi nhận hoạch toán\n- Kiểm tra chi tiết công nợ của từng khách hàng\n- Xuất hóa đơn VAT cho tất cả khách hàng, đại lý\n- Báo cáo thuế VAT đầu ra"
   },
   {
     id: 2,
-    title: "Backend Developer (Generative AI)",
-    company: "Navigos Group",
-    logo: "/images/member_image.png",
+    title: "Kho vận",
+    logo: "/images/thaco_logo.png",
     location: "Ho Chi Minh",
     salary: "Negotiable",
-    time: "Today",
-    tags: ["Backend", "Backend", "GenAI", "+7"],
     isNew: true,
+    description: "- Tổ chức việc nhận/xuất hàng, kiểm kê hàng hóa, bảo quản hàng hóa trong kho\n- Tổ chức việc kiểm soát chất lượng hàng nhập theo yêu cầu của Ban Giám Đốc hoặc khách hàng\n- Tổ chức thực hiện việc chuẩn bị đóng gói hàng hóa và bàn giao cho đối tác vận chuyển theo yêu cầu của khách hàng. Điều phối nhân lực của Kho thực hiện các công việc trên đạt hiệu quả cao nhất\n- Tiếp nhận và làm việc với khách hàng hoặc các bộ phận liên quan để giải quyết các phản ánh về số lượng, chất lượng và các công việc hành chính văn phòng liên quan\n- Thực hiện các báo cáo về số lượng hàng xuất, nhập, tồn cho Ban Giám đốc theo định kỳ hoặc đột xuất."
   },
   {
     id: 3,
-    title: "Senior Software Engineer (Generative AI)",
-    company: "Navigos Group",
-    logo: "/images/member_image.png",
+    title: "Chăm Sóc Khách Hàng",
+    logo: "/images/thaco_logo.png",
     location: "Ho Chi Minh",
     salary: "Negotiable",
-    time: "Today",
-    tags: [
-      "Back End Developer",
-      "Fullstack Development",
-      "Generative AI",
-      "+6",
-    ],
     isNew: true,
+    description: "- Tiếp nhận và theo dõi các đơn hàng được chỉ định từ các bộ phận có liên quan\n- Cập nhật thông tin hàng hóa, giải đáp thắc mắc của khách hàng\n- Kiểm soát chi phí và thông báo cho bộ phận liên quan khi có phát sinh\n- Quản lý dữ liệu thông tin của khách hàng\n- Cập nhật hệ thống chi tiết đơn hàng và các chứng từ liên quan\n- Đảm bảo hoàn thành các nhiệm vụ được cấp trên giao"
+  },
+
+  {
+    id: 4,
+    title: "Hiện Trường",
+    logo: "/images/thaco_logo.png",
+    location: "Ho Chi Minh",
+    salary: "Negotiable",
+    isNew: true,
+    description: "- Tiếp nhận chứng từ và các yêu cầu xử lý hàng hóa cho các đơn hàng xuất/nhập tại các kho bãi và cảng chính\n- Liên hệ với khách hàng để hoàn thành các thủ tục hải quan theo tình chất mỗi lô hàng\n- Thực hiện cân, đo, đếm và kiểm soát hàng hóa sau khi nhà máy vận chuyển đến sân bay/cảng\n- Báo cáo các số liệu chính xác về cho bộ phận văn phòng và cập nhật các tình huống hàng hóa bất thường, hư hỏng nếu có"
+  },
+  {
+    id: 5,
+    title: "Kinh Doanh",
+    logo: "/images/thaco_logo.png",
+    location: "Ho Chi Minh",
+    salary: "Negotiable",
+    isNew: true,
+    description: "- Phát triển mạng lưới đại lý & các đối tác ăn mới với các đại lý\n- Phát triển khách hàng bao gồm khách hàng mới và đại lý mới\n- Đạt mục tiêu\n- Hỗ trợ các đối tác để có các dịch vụ trọn trú nhất\n- Tiếp tục chăm sóc hậu mãi, phối hợp với các bộ phận khác của công ty để giải quyết thắc mắc, khiếu nại, và đề xuất của khách hàng nếu có"
   },
 ];
 
@@ -56,7 +64,7 @@ export default function Career() {
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 w-full h-full z-0">
           <Image
-            src="/images/about-image.jpg"
+            src="/images/career.jpg"
             alt="Career Banner"
             fill
             className="object-cover"
@@ -65,20 +73,25 @@ export default function Career() {
           <div className="absolute inset-0 bg-primary/70 pointer-events-none" />
         </div>
         <div className="relative z-10 flex flex-col items-center text-center px-4">
-          <div className="w-full max-w-3xl mx-auto">
+          <div className="w-full max-w-5xl mx-auto">
             <div className="flex flex-col items-center">
               <div className="w-16 h-1 bg-secondary mb-4 rounded" />
               <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Why working with us
               </h1>
               <p className="text-white text-lg md:text-xl font-medium mb-0">
-                Công ty tạo môi trường làm việc đặc thù và ưu việt để nhân sự
-                phát triển toàn diện đáp ứng yêu cầu hội nhập, đóng góp vào quá
-                trình phát triển kinh tế, văn hóa, xã hội của địa phương, đất
-                nước. Văn hóa THACO thể hiện tính đại diện của một doanh nghiệp
-                không chỉ ở sản phẩm hay thương hiệu, mà còn thể hiện ở mỗi nhân
-                sự thông qua cách ứng xử trong công việc và đời sống hàng ngày,
-                với phương châm “Mỗi nhân sự là một đại sứ của thương hiệu”.
+                THACO xác định NHÂN SỰ PHÙ HỢP là 1 trong 5 trụ cột chính yếu,
+                là nguồn lực quan trọng tạo nên Nền tảng quản trị tối ưu và sự
+                phát triển bền vững của THACO & các Tập đoàn thành viên. THACO
+                không ngừng nỗ lực tạo nên môi trường làm việc kỷ luật, văn hóa
+                và đề cao tính Nhân văn. Tại đây mỗi nhân viên được quan tâm tạo
+                điều kiện để rèn luyện, phát triển bản thân, thăng tiến trong sự
+                nghiệp; thông qua THACO đóng góp, cống hiến cho sự phát triển
+                của đất nước. Văn hóa THACO thể hiện tính đại diện của một doanh
+                nghiệp không chỉ ở sản phẩm hay thương hiệu, mà còn thể hiện ở
+                mỗi nhân sự thông qua cách ứng xử trong công việc và đời sống
+                hàng ngày, với phương châm “Mỗi nhân sự là một đại sứ của thương
+                hiệu”.
               </p>
             </div>
           </div>
@@ -104,7 +117,7 @@ export default function Career() {
                   <div className="w-20 h-20 flex-shrink-0 flex items-center justify-center mr-4">
                     <Image
                       src={job.logo}
-                      alt={job.company}
+                      alt={job.id}
                       width={64}
                       height={64}
                       className="object-contain rounded"
@@ -131,17 +144,6 @@ export default function Career() {
                       </span>
                       <span className="text-gray-400">|</span>
                       <span className="text-gray-600">{job.location}</span>
-                    </div>
-                    <div className="flex flex-wrap items-center gap-2 text-xs mb-2">
-                      <span className="text-gray-400">{job.time}</span>
-                      {job.tags.map((tag, i) => (
-                        <span
-                          key={i}
-                          className="bg-gray-100 text-gray-700 rounded px-2 py-0.5 font-medium"
-                        >
-                          {tag}
-                        </span>
-                      ))}
                     </div>
                   </div>
                   {/* Toggle Button */}
@@ -178,8 +180,9 @@ export default function Career() {
                   }`}
                 >
                   <div className="text-gray-700 text-sm bg-gray-50 rounded p-4 border border-gray-100">
-                    Đây là mô tả chi tiết cho công việc <b>{job.title}</b>. Bạn
-                    có thể cập nhật nội dung này theo từng job thực tế.
+                    <div className="whitespace-pre-line">
+                      {job.description}
+                    </div>
                   </div>
                 </div>
               </div>

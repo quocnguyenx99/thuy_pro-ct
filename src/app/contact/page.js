@@ -1,7 +1,64 @@
+"use client";
 import Image from "next/image";
 import { Mail, Phone, MapPin, Facebook, Twitter } from "lucide-react";
+import { useState } from "react";
+import emailjs from '@emailjs/browser';
+import { emailjsConfig } from '../../config/emailjs';
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState('');
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setSubmitStatus('');
+
+    try {
+      // Gửi email qua EmailJS
+      const result = await emailjs.send(
+        emailjsConfig.serviceId,
+        emailjsConfig.templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          title: `Liên hệ từ ${formData.name}`,
+          time: new Date().toLocaleString('vi-VN', {
+            timeZone: 'Asia/Ho_Chi_Minh',
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+            hour: '2-digit',
+            minute: '2-digit'
+          }),
+          to_email: 'kimnguyen.525102250764@st.ueh.edu.vn', // Email nhận
+        },
+        emailjsConfig.publicKey
+      );
+
+      console.log('Email sent successfully:', result);
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', message: '' }); // Reset form
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsLoading(false);
+    }
+  };
   return (
     <>
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -62,14 +119,14 @@ export default function Contact() {
                   <span className="inline-flex items-center justify-center w-8 h-8 bg-white/20 rounded-full">
                     <Mail className="text-white" size={20} />
                   </span>
-                  <span>dieuthuy@gmail.com</span>
+                  <span>kimnguyen.525102250764@st.ueh.edu.vn</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <span className="inline-flex items-center justify-center w-8 h-8 bg-white/20 rounded-full">
                     <MapPin className="text-white" size={20} />
                   </span>
                   <span>
-                    54 Nguyễn Văn Thủ, Phường Đa Kao, Quận 1, TP. Hồ Chí Minh
+                    54 Nguyễn Văn Thủ, Phường Sài Gòn, TP. Hồ Chí Minh
                   </span>
                 </div>
               </div>
@@ -90,13 +147,26 @@ export default function Contact() {
             </div>
           </div>
           {/* Contact Form */}
-          <form className="flex flex-col gap-4 justify-center">
+          <form className="flex flex-col gap-4 justify-center" onSubmit={handleSubmit}>
+            {submitStatus === 'success' && (
+              <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+                Tin nhắn đã được gửi thành công! Chúng tôi sẽ liên hệ lại với bạn sớm.
+              </div>
+            )}
+            {submitStatus === 'error' && (
+              <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
+                Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại sau.
+              </div>
+            )}
             <div>
               <label className="block text-gray-700 font-medium mb-1">
                 Name<span className="text-red-500">*</span>
               </label>
               <input
                 type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
                 required
                 placeholder="Alex"
                 className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
@@ -108,6 +178,9 @@ export default function Contact() {
               </label>
               <input
                 type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
                 required
                 placeholder="example@gmail.com"
                 className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
@@ -120,6 +193,9 @@ export default function Contact() {
               </label>
               <textarea
                 rows={4}
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 placeholder="Write your message"
                 className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
               />
@@ -127,9 +203,14 @@ export default function Contact() {
             <div className="flex items-center justify-end mt-2">
               <button
                 type="submit"
-                className="bg-secondary hover:bg-orange-600 text-white font-semibold px-6 py-2 rounded transition"
+                disabled={isLoading}
+                className={`${
+                  isLoading 
+                    ? 'bg-gray-400 cursor-not-allowed' 
+                    : 'bg-secondary hover:bg-orange-600'
+                } text-white font-semibold px-6 py-2 rounded transition`}
               >
-                Send Inquiry
+                {isLoading ? 'Đang gửi...' : 'Send Inquiry'}
               </button>
             </div>
             <div className="flex justify-center ">
