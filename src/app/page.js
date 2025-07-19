@@ -279,7 +279,7 @@ export default function Home() {
           <div className="text-center mb-8 md:mb-12">
             <div className="w-12 sm:w-16 h-1 bg-secondary mx-auto mb-4 rounded" />
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-primary mb-4">
-              GIÁ TRỊ CỐT LỖI (8 chữ T)
+              GIÁ TRỊ CỐT LÕI (8 chữ T)
             </h2>
             <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-5xl mx-auto leading-relaxed">
               Sự nỗ lực vượt khó, tự tin, trí tuệ, kỷ luật và ý chí, nghị lực
