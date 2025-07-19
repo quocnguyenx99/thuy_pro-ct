@@ -410,64 +410,64 @@ export default function TuyenDung() {
 
   return (
     <div className="min-h-screen bg-gray-50 pt-16">
-      <div className="max-w-6xl mx-auto px-2 md:px-4 py-8">
-        <div className="bg-white rounded-lg shadow-lg p-4 md:p-8">
-          <h1 className="text-4xl font-bold mb-8 text-center text-primary">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 md:p-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-center text-primary">
             Tuyển dụng tại THACO
           </h1>
 
           {/* Chart Container */}
-          <div className="bg-white p-6 rounded-lg flex justify-center">
-            <div className="w-full max-w-[900px]" style={{ height: "400px" }}>
+          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg flex justify-center">
+            <div className="w-full max-w-[900px]" style={{ height: "300px", minHeight: "250px" }}>
               <Bar data={recruitmentData} options={options} />
             </div>
           </div>
 
           {/* Chart Description */}
-          <div className="text-center mb-12">
-            <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <p className="text-sm sm:text-base md:text-lg font-bold text-gray-700 px-4">
               Biểu đồ 2.1. Tổng quan về công tác tuyển dụng
             </p>
           </div>
 
           {/* Chart Container 2 - Efficiency */}
-          <div className="bg-white p-6 rounded-lg flex justify-center">
-            <div className="w-full max-w-[900px]" style={{ height: "400px" }}>
+          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg flex justify-center">
+            <div className="w-full max-w-[900px]" style={{ height: "300px", minHeight: "250px" }}>
               <Bar data={efficiencyData} options={efficiencyOptions} />
             </div>
           </div>
 
           {/* Chart Description 2 */}
-          <div className="text-center mb-12">
-            <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <p className="text-sm sm:text-base md:text-lg font-bold text-gray-700 px-4">
               Biểu đồ 2.2. Hiệu quả của công tác tuyển dụng
             </p>
           </div>
 
           {/* Chart Container 3 - Cost */}
-          <div className="bg-white p-6 rounded-lg flex justify-center">
-            <div className="w-full max-w-[900px]" style={{ height: "400px" }}>
+          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg flex justify-center">
+            <div className="w-full max-w-[900px]" style={{ height: "300px", minHeight: "250px" }}>
               <Bar data={costData} options={costOptions} />
             </div>
           </div>
 
           {/* Chart Description 3 */}
-          <div className="text-center mb-12">
-            <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <p className="text-sm sm:text-base md:text-lg font-bold text-gray-700 px-4">
               Biểu đồ 2.3. Tổng hợp chi phí tuyển dụng của THACO
             </p>
           </div>
 
           {/* Chart Container 4 - Activity */}
-          <div className="bg-white p-6 rounded-lg flex justify-center">
-            <div className="w-full max-w-[900px]" style={{ height: "400px" }}>
+          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg flex justify-center">
+            <div className="w-full max-w-[900px]" style={{ height: "300px", minHeight: "250px" }}>
               <Bar data={activityData} options={activityOptions} />
             </div>
           </div>
 
           {/* Chart Description 4 */}
-          <div className="text-center mb-12">
-            <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <p className="text-sm sm:text-base md:text-lg font-bold text-gray-700 px-4">
               Biểu đồ 2.4. Tổng hợp hoạt động tuyển dụng của THACO
             </p>
           </div>

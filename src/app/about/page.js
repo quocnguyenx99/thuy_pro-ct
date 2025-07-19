@@ -18,18 +18,18 @@ export default function About() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col items-center text-center px-4">
+        <div className="relative z-10 flex flex-col items-center text-center px-4 sm:px-6 lg:px-8">
           <div className="w-full max-w-5xl mx-auto">
             <div className="flex flex-col items-center">
-              <div className="w-16 h-1 bg-secondary mb-4 rounded" />
-              {/* <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                About Vietnam Silicon
-              </h1> */}
-              <p className="text-white text-lg md:text-xl font-medium mb-0">
+              <div className="w-12 sm:w-16 h-1 bg-secondary mb-4 rounded" />
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-4 leading-tight">
+                About Us
+              </h1>
+              <p className="text-white text-sm sm:text-base md:text-lg lg:text-xl font-medium mb-0 leading-relaxed max-w-4xl">
                 Với mục tiêu trở thành Tập đoàn công nghiệp đa ngành hàng đầu
                 ASEAN, phát triển bền vững trong bối cảnh hội nhập khu vực và
                 thế giới, mang lại giá trị cho khách hàng, đối tác, xã hội và
-                phát triển kinh tế đất nước với tinh thần “Tận tâm phục vụ”,
+                phát triển kinh tế đất nước với tinh thần "Tận tâm phục vụ",
                 THACO không ngừng đầu tư phát triển sức mạnh nội sinh, đổi mới
                 tư duy và hành động, nâng chất, nâng tầm của đội ngũ nhân sự.
               </p>
@@ -39,12 +39,12 @@ export default function About() {
       </section>
 
       {/* Team Members Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-primary text-center mb-12">
+      <section className="py-8 sm:py-12 md:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-primary text-center mb-6 sm:mb-8 md:mb-12">
             Our Team Members
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 justify-items-center">
+          <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
             {/* Team Member Card 1 */}
             <div
               className="shine-effect bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-lg shadow-lg transition-transform hover:-translate-y-2 group w-full max-w-[256px]"
@@ -58,14 +58,14 @@ export default function About() {
                 <div className="relative h-full w-full rounded-lg overflow-hidden border-4 border-white/20 shadow-inner">
                   <Image
                     src="/images/thuy.jpg"
-                    alt="Team Member 1"
+                    alt="Trần Diệu Thuỳ - HR Leader"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
               </div>
               <div className="p-4 text-center">
-                <p className="text-white mb-2">HR Leader</p>
+                <p className="text-white mb-2 text-sm sm:text-base">HR Leader</p>
                 <h3 className="text-xl font-semibold text-white">
                   Trần Diệu Thuỳ
                 </h3>
@@ -85,14 +85,14 @@ export default function About() {
                 <div className="relative h-full w-full rounded-lg overflow-hidden border-4 border-white/20 shadow-inner">
                   <Image
                     src="/images/kim.jpg"
-                    alt="Team Member 1"
+                    alt="Nguyễn Quế Kim - HR Executive"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
               </div>
               <div className="p-4 text-center">
-                <p className="text-white mb-2">HR Executive</p>
+                <p className="text-white mb-2 text-sm sm:text-base">HR Executive</p>
                 <h3 className="text-xl font-semibold text-white">
                   Nguyễn Quế Kim
                 </h3>
@@ -112,14 +112,14 @@ export default function About() {
                 <div className="relative h-full w-full rounded-lg overflow-hidden border-4 border-white/20 shadow-inner">
                   <Image
                     src="/images/han.jpg"
-                    alt="Team Member 1"
+                    alt="Nguyễn Bảo Hân - L&D Executive"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
               </div>
               <div className="p-4 text-center">
-                <p className="text-white mb-2">L&D Executive</p>
+                <p className="text-white mb-2 text-sm sm:text-base">L&D Executive</p>
                 <h3 className="text-xl font-semibold text-white">
                   Nguyễn Bảo Hân
                 </h3>
@@ -130,12 +130,12 @@ export default function About() {
       </section>
 
       {/* Partners Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-500 to-blue-700 text-white">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+      <section className="py-8 sm:py-12 md:py-16 bg-gradient-to-r from-blue-500 to-blue-700 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold mb-3 sm:mb-4 md:mb-6">
             Partner that work with Us
           </h2>
-          <p className="text-lg md:text-xl font-medium">
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-relaxed max-w-4xl mx-auto">
             V.Y Consulting tự hào là đối tác chiến lược của THACO trong việc xây
             dựng và phát triển văn hóa doanh nghiệp, góp phần nâng cao hiệu quả
             hoạt động và phát triển bền vững của tập đoàn. Chúng tôi cam kết
@@ -146,9 +146,9 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-8">
+      <section className="py-8 sm:py-12 md:py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-wrap justify-center gap-6 lg:gap-8">
             {/* Team Member Card 1 */}
             <div
               className="shine-effect bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 rounded-lg shadow-lg transition-transform hover:-translate-y-2 group w-full max-w-[256px]"
@@ -162,7 +162,7 @@ export default function About() {
                 <div className="relative h-full w-full rounded-lg overflow-hidden border-4 border-white/20 shadow-inner">
                   <Image
                     src="/images/anh.jpg"
-                    alt="Team Member 1"
+                    alt="Phan Ngọc Ánh - HR Consultant"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
@@ -189,7 +189,7 @@ export default function About() {
                 <div className="relative h-full w-full rounded-lg overflow-hidden border-4 border-white/20 shadow-inner">
                   <Image
                     src="/images/phung.jpg"
-                    alt="Team Member 1"
+                    alt="Võ Thị Kim Phụng - HR Consultant"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
@@ -216,7 +216,7 @@ export default function About() {
                 <div className="relative h-full w-full rounded-lg overflow-hidden border-4 border-white/20 shadow-inner">
                   <Image
                     src="/images/vy.jpg"
-                    alt="Team Member 1"
+                    alt="Trương Thị Khánh Vy - HR Consultant"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />

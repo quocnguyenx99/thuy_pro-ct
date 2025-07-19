@@ -75,9 +75,9 @@ export default function ChinhSachDaiNgo() {
         labels: {
           usePointStyle: true,
           pointStyle: "circle",
-          padding: 20,
+          padding: window.innerWidth < 640 ? 10 : 20,
           font: {
-            size: 14,
+            size: window.innerWidth < 640 ? 10 : window.innerWidth < 768 ? 12 : 14,
           },
         },
       },
@@ -91,7 +91,7 @@ export default function ChinhSachDaiNgo() {
         color: "#000",
         font: {
           weight: "bold",
-          size: 12,
+          size: window.innerWidth < 640 ? 8 : window.innerWidth < 768 ? 10 : 12,
         },
         formatter: (value) => {
           if (value >= 1000000) {
@@ -111,7 +111,7 @@ export default function ChinhSachDaiNgo() {
         ticks: {
           stepSize: 50000000,
           font: {
-            size: 12,
+            size: window.innerWidth < 640 ? 8 : window.innerWidth < 768 ? 10 : 12,
           },
           callback: function (value) {
             return value / 1000000 + "M";
@@ -124,7 +124,7 @@ export default function ChinhSachDaiNgo() {
       x: {
         ticks: {
           font: {
-            size: 12,
+            size: window.innerWidth < 640 ? 8 : window.innerWidth < 768 ? 10 : 12,
           },
         },
         grid: {
@@ -192,9 +192,9 @@ export default function ChinhSachDaiNgo() {
         labels: {
           usePointStyle: true,
           pointStyle: "circle",
-          padding: 20,
+          padding: window.innerWidth < 640 ? 10 : 20,
           font: {
-            size: 14,
+            size: window.innerWidth < 640 ? 10 : window.innerWidth < 768 ? 12 : 14,
           },
         },
       },
@@ -212,7 +212,7 @@ export default function ChinhSachDaiNgo() {
         ticks: {
           stepSize: 1,
           font: {
-            size: 12,
+            size: window.innerWidth < 640 ? 8 : window.innerWidth < 768 ? 10 : 12,
           },
         },
         grid: {
@@ -222,7 +222,7 @@ export default function ChinhSachDaiNgo() {
       x: {
         ticks: {
           font: {
-            size: 12,
+            size: window.innerWidth < 640 ? 8 : window.innerWidth < 768 ? 10 : 12,
           },
         },
         grid: {
@@ -234,142 +234,142 @@ export default function ChinhSachDaiNgo() {
 
   return (
     <div className="min-h-screen bg-gray-50 pt-16">
-      <div className="max-w-6xl mx-auto px-2 md:px-4 py-8">
-        <div className="bg-white rounded-lg shadow-lg p-4 md:p-8">
-          <h1 className="text-4xl font-bold mb-8 text-center text-primary">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+        <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 md:p-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-center text-primary">
             Chính sách đãi ngộ tại THACO
           </h1>
 
           {/* Chart Container */}
-          <div className="bg-white p-6 rounded-lg flex justify-center">
-            <div className="w-full max-w-[900px]" style={{ height: "400px" }}>
+          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg flex justify-center">
+            <div className="w-full max-w-[650px] sm:max-w-[750px] md:max-w-[900px]" style={{ height: "300px", minHeight: "300px" }}>
               <Bar data={salaryData} options={options} />
             </div>
           </div>
 
           {/* Chart Description */}
-          <div className="text-center mb-12">
-            <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <p className="text-sm sm:text-base md:text-lg font-bold text-gray-700 flex items-center justify-center px-2">
               Biểu đồ 4.1. Tổng hợp khung lương theo tiêu chí của THACO
             </p>
           </div>
 
           {/* Salary Comparison Table */}
-          <div className="bg-white p-6 rounded-lg mb-2">
+          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg mb-2">
             <div className="overflow-x-auto">
-              <table className="w-full border-collapse border border-gray-400 min-w-[1200px]">
+              <table className="w-full border-collapse border border-gray-400 min-w-[800px] sm:min-w-[1000px] md:min-w-[1200px]">
                 <thead>
                   <tr className="bg-gray-100">
-                    <th className="border border-gray-400 px-6 py-3 text-left font-semibold text-gray-700 w-80 whitespace-nowrap">
+                    <th className="border border-gray-400 px-2 sm:px-4 md:px-6 py-2 sm:py-3 text-left font-semibold text-gray-700 w-60 sm:w-72 md:w-80 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       Vị trí
                     </th>
-                    <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700 w-32 whitespace-nowrap">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center font-semibold text-gray-700 w-24 sm:w-28 md:w-32 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       Kinh nghiệm (năm)
                     </th>
                     <th
-                      className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700 bg-blue-50 w-36 whitespace-nowrap"
+                      className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center font-semibold text-gray-700 bg-blue-50 w-28 sm:w-32 md:w-36 text-xs sm:text-sm md:text-base whitespace-nowrap"
                       colSpan="2"
                     >
                       Khung lương THACO
                     </th>
-                    <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700 w-40 whitespace-nowrap">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center font-semibold text-gray-700 w-32 sm:w-36 md:w-40 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       Thực tế tại THACO
                     </th>
-                    <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700 w-48 whitespace-nowrap">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center font-semibold text-gray-700 w-40 sm:w-44 md:w-48 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       Mặt bằng chung trên thị trường
                     </th>
                   </tr>
                   <tr className="bg-gray-50">
-                    <th className="border border-gray-400 px-6 py-2 text-center font-semibold text-gray-700 whitespace-nowrap"></th>
-                    <th className="border border-gray-400 px-4 py-2 text-center font-semibold text-gray-700 whitespace-nowrap"></th>
-                    <th className="border border-gray-400 px-4 py-2 text-center font-semibold text-gray-700 bg-blue-50 whitespace-nowrap">
+                    <th className="border border-gray-400 px-2 sm:px-4 md:px-6 py-2 text-center font-semibold text-gray-700 text-xs sm:text-sm md:text-base whitespace-nowrap"></th>
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 text-center font-semibold text-gray-700 text-xs sm:text-sm md:text-base whitespace-nowrap"></th>
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 text-center font-semibold text-gray-700 bg-blue-50 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       Thấp nhất
                     </th>
-                    <th className="border border-gray-400 px-4 py-2 text-center font-semibold text-gray-700 bg-blue-50 whitespace-nowrap">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 text-center font-semibold text-gray-700 bg-blue-50 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       Cao nhất
                     </th>
-                    <th className="border border-gray-400 px-4 py-2 text-center font-semibold text-gray-700 whitespace-nowrap"></th>
-                    <th className="border border-gray-400 px-4 py-2 text-center font-semibold text-gray-700 whitespace-nowrap"></th>
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 text-center font-semibold text-gray-700 text-xs sm:text-sm md:text-base whitespace-nowrap"></th>
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 text-center font-semibold text-gray-700 text-xs sm:text-sm md:text-base whitespace-nowrap"></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-400 px-6 py-3 text-gray-800 font-medium whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-4 md:px-6 py-2 sm:py-3 text-gray-800 font-medium text-xs sm:text-sm md:text-base whitespace-nowrap">
                       Chuyên viên Kế toán / Tài chính
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800 whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       3 - 5
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800 whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       650
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800 whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       880
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800 whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       600 - 750
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800 whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       650 - 1000
                     </td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-400 px-6 py-3 text-gray-800 font-medium whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-4 md:px-6 py-2 sm:py-3 text-gray-800 font-medium text-xs sm:text-sm md:text-base whitespace-nowrap">
                       Chuyên viên Nhân sự
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800 whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       3 - 5
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800 whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       650
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800 whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       900
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800 whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       650 - 780
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800 whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       650 - 1000
                     </td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-400 px-6 py-3 text-gray-800 font-medium whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-4 md:px-6 py-2 sm:py-3 text-gray-800 font-medium text-xs sm:text-sm md:text-base whitespace-nowrap">
                       Chuyên viên Kinh doanh
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800 whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       4 - 6
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800 whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       700
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800 whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       1000
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800 whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       700 - 900
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800 whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       650 - 1000
                     </td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-400 px-6 py-3 text-gray-800 font-medium whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-4 md:px-6 py-2 sm:py-3 text-gray-800 font-medium text-xs sm:text-sm md:text-base whitespace-nowrap">
                       Chuyên viên Chiến lược - Kế hoạch
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800 whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       4 - 6
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800 whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       780
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800 whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       1100
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800 whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       700 - 1000
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800 whitespace-nowrap">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base whitespace-nowrap">
                       800 - 1500
                     </td>
                   </tr>
@@ -380,72 +380,72 @@ export default function ChinhSachDaiNgo() {
 
           {/* Table Caption */}
           <div className="text-center mb-4">
-            <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
+            <p className="text-sm sm:text-base md:text-lg font-bold text-gray-700 flex items-center justify-center px-2">
               Bảng 4.2. So sánh khung lương trung bình của THACO so với mặt bằng
               chung trên thị trường (đơn vị tính: USD)
             </p>
           </div>
 
           {/* Benefits Summary Table */}
-          <div className="bg-white p-6 rounded-lg mb-2">
+          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg mb-2">
             <div className="overflow-x-auto">
               <table className="w-full border-collapse border border-gray-400">
                 <thead>
                   <tr className="bg-gray-100">
-                    <th className="border border-gray-400 px-4 py-3 text-left font-semibold text-gray-700">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-left font-semibold text-gray-700 text-xs sm:text-sm md:text-base">
                       Loại phụ cấp
                     </th>
-                    <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center font-semibold text-gray-700 text-xs sm:text-sm md:text-base">
                       2021
                     </th>
-                    <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center font-semibold text-gray-700 text-xs sm:text-sm md:text-base">
                       2022
                     </th>
-                    <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center font-semibold text-gray-700 text-xs sm:text-sm md:text-base">
                       2023
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-400 px-4 py-3 text-gray-800 font-medium">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-gray-800 font-medium text-xs sm:text-sm md:text-base">
                       Ăn trưa
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       780,000
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       780,000
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       780,000
                     </td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-400 px-4 py-3 text-gray-800 font-medium">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-gray-800 font-medium text-xs sm:text-sm md:text-base">
                       Gửi xe
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       440,000
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       440,000
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       440,000
                     </td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-400 px-4 py-3 text-gray-800 font-medium">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-gray-800 font-medium text-xs sm:text-sm md:text-base">
                       Điện thoại (tùy cấp bậc)
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       200,000 - 500,000
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       200,000 - 500,000
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       200,000 - 500,000
                     </td>
                   </tr>
@@ -456,147 +456,147 @@ export default function ChinhSachDaiNgo() {
 
           {/* Table Caption 4.3 */}
           <div className="text-center mb-4">
-            <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
+            <p className="text-sm sm:text-base md:text-lg font-bold text-gray-700 flex items-center justify-center px-2">
               Bảng 4.3. Tổng hợp các loại phụ cấp ở THACO
             </p>
           </div>
 
           {/* Employee Benefits Table 4.4 */}
-          <div className="bg-white p-6 rounded-lg mb-2">
+          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg mb-2">
             <div className="overflow-x-auto">
               <table className="w-full border-collapse border border-gray-400">
                 <thead>
                   <tr className="bg-gray-100">
-                    <th className="border border-gray-400 px-4 py-3 text-left font-semibold text-gray-700">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-left font-semibold text-gray-700 text-xs sm:text-sm md:text-base">
                       Các loại phúc lợi
                     </th>
-                    <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center font-semibold text-gray-700 text-xs sm:text-sm md:text-base">
                       2021
                     </th>
-                    <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center font-semibold text-gray-700 text-xs sm:text-sm md:text-base">
                       2022
                     </th>
-                    <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center font-semibold text-gray-700 text-xs sm:text-sm md:text-base">
                       2023
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-400 px-4 py-3 text-gray-800 font-medium">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-gray-800 font-medium text-xs sm:text-sm md:text-base">
                       Thưởng Tết dương lịch
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       -
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       1 triệu
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       -
                     </td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-400 px-4 py-3 text-gray-800 font-medium">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-gray-800 font-medium text-xs sm:text-sm md:text-base">
                       Thưởng 30/4 & 1/5
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       -
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       -
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       -
                     </td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-400 px-4 py-3 text-gray-800 font-medium">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-gray-800 font-medium text-xs sm:text-sm md:text-base">
                       Thưởng 2/9
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       -
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       -
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       -
                     </td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-400 px-4 py-3 text-gray-800 font-medium">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-gray-800 font-medium text-xs sm:text-sm md:text-base">
                       Mừng sinh nhật
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       500,000
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       -
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       -
                     </td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-400 px-4 py-3 text-gray-800 font-medium">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-gray-800 font-medium text-xs sm:text-sm md:text-base">
                       Du lịch
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       5 triệu / lần / năm
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       -
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       -
                     </td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-400 px-4 py-3 text-gray-800 font-medium">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-gray-800 font-medium text-xs sm:text-sm md:text-base">
                       Khám sức khỏe
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       2 lần / năm
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       1 lần / năm
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       1 lần / năm
                     </td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-400 px-4 py-3 text-gray-800 font-medium">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-gray-800 font-medium text-xs sm:text-sm md:text-base">
                       Ngày hội gia đình
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       500,000
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       -
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       -
                     </td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-400 px-4 py-3 text-gray-800 font-medium">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-gray-800 font-medium text-xs sm:text-sm md:text-base">
                       Mừng cưới
                     </td>
                     <td
-                      className="border border-gray-400 px-4 py-3 text-center text-gray-800"
+                      className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base"
                       colSpan="3"
                     >
                       Tùy cấp bậc (5 - 10 triệu)
                     </td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-400 px-4 py-3 text-gray-800 font-medium">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-gray-800 font-medium text-xs sm:text-sm md:text-base">
                       Quốc tế Thiếu nhi
                     </td>
                     <td
-                      className="border border-gray-400 px-4 py-3 text-center text-gray-800"
+                      className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base"
                       colSpan="3"
                     >
                       500,000 / bé (dưới 10 tuổi)
@@ -609,50 +609,50 @@ export default function ChinhSachDaiNgo() {
 
           {/* Table Caption 4.4 */}
           <div className="text-center mb-4">
-            <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
+            <p className="text-sm sm:text-base md:text-lg font-bold text-gray-700 flex items-center justify-center px-2">
               Bảng 4.4. Những chế độ phúc lợi của nhân viên THACO (đơn vị tính:
               đồng)
             </p>
           </div>
 
           {/* Bonus Table 4.5 */}
-          <div className="bg-white p-6 rounded-lg mb-2">
+          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg mb-2">
             <div className="overflow-x-auto">
               <table className="w-full border-collapse border border-gray-400">
                 <thead>
                   <tr className="bg-gray-100">
-                    <th className="border border-gray-400 px-4 py-3 text-left font-semibold text-gray-700">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-left font-semibold text-gray-700 text-xs sm:text-sm md:text-base">
                       Các khoản thưởng
                     </th>
-                    <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center font-semibold text-gray-700 text-xs sm:text-sm md:text-base">
                       2021
                     </th>
-                    <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center font-semibold text-gray-700 text-xs sm:text-sm md:text-base">
                       2022
                     </th>
-                    <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center font-semibold text-gray-700 text-xs sm:text-sm md:text-base">
                       2023
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-400 px-4 py-3 text-gray-800 font-medium">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-gray-800 font-medium text-xs sm:text-sm md:text-base">
                       Thưởng Tết nguyên đán
                     </td>
                     <td
-                      className="border border-gray-400 px-4 py-3 text-center text-gray-800"
+                      className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base"
                       colSpan="3"
                     >
                       Theo hệ số đánh giá
                     </td>
                   </tr>
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-400 px-4 py-3 text-gray-800 font-medium">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-gray-800 font-medium text-xs sm:text-sm md:text-base">
                       Lương tháng 13
                     </td>
                     <td
-                      className="border border-gray-400 px-4 py-3 text-center text-gray-800"
+                      className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base"
                       colSpan="3"
                     >
                       1 tháng lương thu nhập
@@ -665,22 +665,22 @@ export default function ChinhSachDaiNgo() {
 
           {/* Table Caption 4.5 */}
           <div className="text-center mb-4">
-            <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
+            <p className="text-sm sm:text-base md:text-lg font-bold text-gray-700 flex items-center justify-center px-2">
               Bảng 4.5. Những khoản thưởng không thường xuyên của THACO (đơn vị
               tính: đồng)
             </p>
           </div>
 
           {/* Bonus Ratio Line Chart */}
-          <div className="bg-white p-6 rounded-lg flex justify-center">
-            <div className="w-full max-w-[650px]" style={{ height: "400px" }}>
+          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg flex justify-center">
+            <div className="w-full max-w-[500px] sm:max-w-[600px] md:max-w-[650px]" style={{ height: "300px", minHeight: "300px" }}>
               <Line data={bonusRatioData} options={bonusRatioOptions} />
             </div>
           </div>
 
           {/* Chart Description 4.6 */}
-          <div className="text-center mb-8">
-            <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
+          <div className="text-center mb-6 sm:mb-8">
+            <p className="text-sm sm:text-base md:text-lg font-bold text-gray-700 flex items-center justify-center px-2">
               Biểu đồ 4.6. Tỷ lệ thưởng hàng năm (đơn vị tính: tháng lương thu
               nhập)
             </p>

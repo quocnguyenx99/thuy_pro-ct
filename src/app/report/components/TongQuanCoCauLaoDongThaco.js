@@ -190,65 +190,65 @@ export default function TongQuanCoCauLaoDongThaco() {
 
   return (
     <div className="min-h-screen bg-gray-50 pt-16">
-      <div className="max-w-6xl mx-auto px-2 md:px-4 py-8">
-        <div className="bg-white rounded-lg shadow-lg p-4 md:p-8">
-          <h1 className="text-4xl font-bold mb-8 text-center text-primary">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 md:p-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-center text-primary">
             Tổng quan cơ cấu lao động tại THACO
           </h1>
 
           {/* Chart Container */}
-          <div className="bg-white p-6 rounded-lg flex justify-center">
-            <div className="w-full max-w-[650px]" style={{ height: "400px" }}>
+          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg flex justify-center">
+            <div className="w-full max-w-[650px]" style={{ height: "300px", minHeight: "250px" }}>
               <Bar data={data} options={options} />
             </div>
           </div>
 
           {/* Chart Description */}
-          <div className="text-center mb-12">
-            <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <p className="text-sm sm:text-base md:text-lg font-bold text-gray-700 px-4">
               Biểu đồ 1.1. Tình hình nguồn nhân lực của THACO theo cấp bậc
             </p>
           </div>
 
           {/* Chart Container 2 - Education Level */}
-          <div className="bg-white p-6 rounded-lg flex justify-center">
-            <div className="w-full max-w-[650px]" style={{ height: "400px" }}>
+          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg flex justify-center">
+            <div className="w-full max-w-[650px]" style={{ height: "300px", minHeight: "250px" }}>
               <Bar data={educationData} options={options} />
             </div>
           </div>
 
           {/* Chart Description 2 */}
-          <div className="text-center mb-12">
-            <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <p className="text-sm sm:text-base md:text-lg font-bold text-gray-700 px-4">
               Biểu đồ 1.2. Tình hình nguồn nhân lực của THACO theo trình độ học
               vấn
             </p>
           </div>
 
           {/* Chart Container 3 - Age Group */}
-          <div className="bg-white p-6 rounded-lg flex justify-center">
-            <div className="w-full max-w-[650px]" style={{ height: "400px" }}>
+          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg flex justify-center">
+            <div className="w-full max-w-[650px]" style={{ height: "300px", minHeight: "250px" }}>
               <Bar data={ageData} options={options} />
             </div>
           </div>
 
           {/* Chart Description 3 */}
-          <div className="text-center mb-12">
-            <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <p className="text-sm sm:text-base md:text-lg font-bold text-gray-700 px-4">
               Biểu đồ 1.3. Tình hình nguồn nhân lực của THACO theo độ tuổi
             </p>
           </div>
 
           {/* Chart Container 4 - Gender */}
-          <div className="bg-white p-6 rounded-lg flex justify-center">
-            <div className="w-full max-w-[650px]" style={{ height: "400px" }}>
+          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg flex justify-center">
+            <div className="w-full max-w-[650px]" style={{ height: "300px", minHeight: "250px" }}>
               <Bar data={genderData} options={options} />
             </div>
           </div>
 
           {/* Chart Description 4 */}
           <div className="text-center">
-            <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
+            <p className="text-sm sm:text-base md:text-lg font-bold text-gray-700 px-4">
               Biểu đồ 1.4. Tình hình nguồn nhân lực của THACO theo giới tính
             </p>
           </div>

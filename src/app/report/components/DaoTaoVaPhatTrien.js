@@ -122,9 +122,9 @@ export default function DaoTaoVaPhatTrien() {
         labels: {
           usePointStyle: true,
           pointStyle: "circle",
-          padding: 20,
+          padding: window.innerWidth < 640 ? 10 : 20,
           font: {
-            size: 14,
+            size: window.innerWidth < 640 ? 10 : window.innerWidth < 768 ? 12 : 14,
           },
         },
       },
@@ -139,7 +139,7 @@ export default function DaoTaoVaPhatTrien() {
           color: "#000",
           font: {
             weight: "bold",
-            size: 12,
+            size: window.innerWidth < 640 ? 8 : window.innerWidth < 768 ? 10 : 12,
           },
           formatter: (value) => {
             return value.toLocaleString();
@@ -155,7 +155,7 @@ export default function DaoTaoVaPhatTrien() {
         ticks: {
           stepSize: 10,
           font: {
-            size: 12,
+            size: window.innerWidth < 640 ? 8 : window.innerWidth < 768 ? 10 : 12,
           },
         },
         grid: {
@@ -165,7 +165,7 @@ export default function DaoTaoVaPhatTrien() {
       x: {
         ticks: {
           font: {
-            size: 12,
+            size: window.innerWidth < 640 ? 8 : window.innerWidth < 768 ? 10 : 12,
           },
         },
         grid: {
@@ -182,44 +182,44 @@ export default function DaoTaoVaPhatTrien() {
 
   return (
     <div className="min-h-screen bg-gray-50 pt-16">
-      <div className="max-w-6xl mx-auto px-2 md:px-4 py-8">
-        <div className="bg-white rounded-lg shadow-lg p-4 md:p-8">
-          <h1 className="text-4xl font-bold mb-8 text-center text-primary">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:py-16">
+        <div className="bg-white rounded-lg shadow-lg p-4 sm:p-6 md:p-8">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-6 sm:mb-8 text-center text-primary">
             Đào tạo và phát triển tại THACO
           </h1>
 
           {/* First Table Container - Chương trình nội bộ */}
-          <div className="bg-white p-6 rounded-lg mb-4">
+          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg mb-4">
             <div className="overflow-x-auto">
               <table className="w-full border-collapse border border-gray-400">
                 <tbody>
                   {/* Header Row */}
                   <tr className="bg-gray-100">
-                    <th className="border border-gray-400 px-4 py-3 text-left font-semibold text-gray-700">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-left font-semibold text-gray-700 text-xs sm:text-sm md:text-base">
                       Chương trình nội bộ
                     </th>
-                    <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center font-semibold text-gray-700 text-xs sm:text-sm md:text-base">
                       Tổng số đề tài
                     </th>
-                    <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center font-semibold text-gray-700 text-xs sm:text-sm md:text-base">
                       Tổng số bài viết
                     </th>
-                    <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center font-semibold text-gray-700 text-xs sm:text-sm md:text-base">
                       Tổng số học viên đăng ký tham gia
                     </th>
                   </tr>
                   {/* Data Row */}
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-400 px-4 py-3 text-gray-800 font-medium">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-gray-800 font-medium text-xs sm:text-sm md:text-base">
                       Chương trình nội bộ
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       25
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       250
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       2407
                     </td>
                   </tr>
@@ -229,37 +229,37 @@ export default function DaoTaoVaPhatTrien() {
           </div>
 
           {/* Second Table Container - Chương trình liên kết với website khác */}
-          <div className="bg-white p-6 rounded-lg mb-2">
+          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg mb-2">
             <div className="overflow-x-auto">
               <table className="w-full border-collapse border border-gray-400">
                 <tbody>
                   {/* Header Row */}
                   <tr className="bg-gray-100">
-                    <th className="border border-gray-400 px-4 py-3 text-left font-semibold text-gray-700">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-left font-semibold text-gray-700 text-xs sm:text-sm md:text-base">
                       Chương trình liên kết với website khác
                     </th>
-                    <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center font-semibold text-gray-700 text-xs sm:text-sm md:text-base">
                       Tổng số chương trình đăng ký
                     </th>
-                    <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center font-semibold text-gray-700 text-xs sm:text-sm md:text-base">
                       Tổng số học viên đăng ký tham gia
                     </th>
-                    <th className="border border-gray-400 px-4 py-3 text-center font-semibold text-gray-700">
+                    <th className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center font-semibold text-gray-700 text-xs sm:text-sm md:text-base">
                       Tổng số chương trình hoàn tất
                     </th>
                   </tr>
                   {/* Data Row */}
                   <tr className="hover:bg-gray-50">
-                    <td className="border border-gray-400 px-4 py-3 text-gray-800 font-medium">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-gray-800 font-medium text-xs sm:text-sm md:text-base">
                       Chương trình liên kết với website khác
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       20
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       1200
                     </td>
-                    <td className="border border-gray-400 px-4 py-3 text-center text-gray-800">
+                    <td className="border border-gray-400 px-2 sm:px-3 md:px-4 py-2 sm:py-3 text-center text-gray-800 text-xs sm:text-sm md:text-base">
                       12
                     </td>
                   </tr>
@@ -269,15 +269,15 @@ export default function DaoTaoVaPhatTrien() {
           </div>
 
           {/* Chart Container */}
-          <div className="bg-white p-6 rounded-lg flex justify-center">
-            <div className="w-full max-w-[650px]" style={{ height: "400px" }}>
+          <div className="bg-white p-3 sm:p-4 md:p-6 rounded-lg flex justify-center">
+            <div className="w-full max-w-[500px] sm:max-w-[600px] md:max-w-[650px]" style={{ height: "300px", minHeight: "300px" }}>
               <Bar data={chartData} options={options} />
             </div>
           </div>
 
           {/* Chart Description */}
-          <div className="text-center mb-12">
-            <p className="text-lg font-bold text-gray-700 flex items-center justify-center">
+          <div className="text-center mb-8 sm:mb-10 md:mb-12">
+            <p className="text-sm sm:text-base md:text-lg font-bold text-gray-700 flex items-center justify-center px-2">
               Biểu đồ 3.1. Biểu đồ thống kê số lượng học viên tham gia chương
               trình đào tạo MTP 2021 - 2023
             </p>
